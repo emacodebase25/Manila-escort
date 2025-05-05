@@ -1,0 +1,360 @@
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #080b13;
+      color: #ffffff;
+    }
+    .hero {
+      background-image: url('/images/hero-img.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+    }
+    .gold-text {
+      color: #d4af37;
+    }
+    .gold-border {
+      border-color: #d4af37;
+    }
+    .vip-box {
+      border: 2px solid #d4af37;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .blue-section {
+      background-color: #1e3a8a;
+    }
+
+
+/* Navigation bar styles */
+.filter-navigation {
+    background-color: #000000;
+    padding: 8px 0;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+  
+  .nav-button {
+    background-color: #2563eb; /* blue-600 */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: 0 4px;
+    font-weight: 500;
+  }
+  
+  .nav-button:hover {
+    background-color: #1d4ed8; /* slightly darker blue */
+  }
+  
+  /* Hide scrollbar but allow scrolling on mobile */
+  .nav-buttons::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .nav-buttons {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .nav-buttons {
+      justify-content: flex-start;
+    }
+    
+    .nav-button {
+      flex-shrink: 0;
+    }
+  }
+
+  /* Additional CSS for Reviews Section */
+
+.reviews-section {
+    background-color: #2563eb; /* Blue background */
+    padding: 40px 0;
+    color: #ffffff;
+  }
+  
+  .reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .review-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 340px;
+    color: #333;
+  }
+  
+  .review-header {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .reviewer-name {
+    color: #2563eb; /* Blue text */
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .review-content {
+    display: flex;
+    padding: 15px;
+  }
+  
+  .reviewer-img {
+    width: 120px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 4px;
+  }
+  
+  .review-text {
+    font-size: 14px;
+    color: #2563eb; /* Blue text */
+    line-height: 1.4;
+  }
+  
+  .read-more {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .review-footer {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .review-date {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .ratings {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .ratings span {
+    margin-right: 5px;
+    font-weight: bold;
+  }
+  
+  .stars {
+    color: #ffc107; /* Gold star color */
+    margin-right: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .reviews-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .review-card {
+      max-width: 100%;
+    }
+  }
+
+  /* Additional CSS for Text Paragraph Section */
+
+.text-paragraph-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 0;
+  }
+  
+  .text-paragraph-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .text-paragraph-section h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .text-paragraph-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ffffff;
+    max-width: 100%;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .text-paragraph-section h2 {
+      font-size: 24px;
+    }
+    
+    .text-paragraph-section h3 {
+      font-size: 20px;
+    }
+    
+    .text-paragraph-section p {
+      font-size: 15px;
+    }
+  }
+
+  /* Additional CSS for FAQ Section */
+
+.faq-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 0;
+  }
+  
+  .faq-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .faq-section p.text-center {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+  }
+  
+  .faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    margin-bottom: 2px;
+    overflow: hidden;
+  }
+  
+  .faq-question {
+    background-color: #2563eb; /* Blue background */
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .faq-icon {
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .faq-answer {
+    background-color: #000000; /* Black background */
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-answer.open {
+    padding: 20px;
+    max-height: 500px;
+  }
+  
+  .faq-answer p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Additional CSS for Category Section */
+
+.category-section {
+    background-color: #000000;
+    padding: 15px 0;
+  }
+  
+  .category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .category-button {
+    background-color: #2563eb; /* Blue background */
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    min-width: 180px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-button:hover {
+    background-color: #1d4ed8; /* Slightly darker blue on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .category-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .category-button {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .escort-categories-section .container {
+    max-width: 1200px;
+  }
+  
+  .escort-categories-section a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .escort-categories-section .grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .escort-categories-section a {
+      padding: 1rem;
+    }
+  }
+  
