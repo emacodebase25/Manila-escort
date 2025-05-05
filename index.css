@@ -357,4 +357,18 @@
       padding: 1rem;
     }
   }
+
+  @media (max-width: 640px) {
+    .container h2 {
+      font-size: 1.75rem;
+    }
+    
+    .lg\:col-span-7 h3 {
+      font-size: 1.5rem;
+    }
+    
+    .lg\:col-span-5 h3 {
+      font-size: 1.25rem;
+    }
+  }
   
