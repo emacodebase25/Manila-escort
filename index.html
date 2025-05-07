@@ -10,67 +10,80 @@
 </head>
 <body>
   <!-- Header & Navigation -->
-  <header class="bg-black py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <div class="flex items-center">
-        <img src="#" alt="Manila Luxury model Logo" class="mr-3">
-        <span class="text-xl font-bold gold-text">MANILA LUXURY model</span>
+ 
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+         <a href="index.html"> <img src="./assets/images/logo 1.png"></a>
+        </div>
+        
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link dropdown-arrow">Gallery</a>
+
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link active dropdown-arrow">Services</a>
+
+            </li>
+            <li class="dropdown">
+              <a href="location.html" class="nav-link dropdown-arrow">Location</a>
+
+            </li>
+            <li><a href="#" class="nav-link">Rates</a></li>
+            <li><a href="#" class="nav-link">Casting</a></li>
+            <li><a href="#" class="nav-link">Booking</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="vip-section">
+          <a href="#" class="vip-button">VIP ESCORTS</a>
+        </div>
       </div>
-      <nav class="hidden md:flex space-x-6">
-        <a href="#" class="text-white hover:text-yellow-400">Home</a>
-        <a href="#" class="text-white hover:text-yellow-400">Gallery</a>
-        <a href="#" class="text-white hover:text-yellow-400">Services</a>
-        <a href="#" class="text-white hover:text-yellow-400">Location</a>
-        <a href="#" class="text-white hover:text-yellow-400">Rates</a>
-        <a href="#" class="text-white hover:text-yellow-400">Booking</a>
-        <a href="#" class="text-white hover:text-yellow-400">Contact</a>
-        <a href="#" class="border-2 border-yellow-600 text-yellow-400 px-4 py-1 rounded-full hover:bg-yellow-600 hover:text-white">VIP SERVICES</a>
-      </nav>
-      <button class="md:hidden focus:outline-none">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
     </div>
   </header>
-
  
   <!-- Hero Section -->
-  <section class="relative h-[500px]" style="background-image: url('/images/hero-img.jpg'); background-size: cover; background-position: center;">
-    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <section class="relative h-[550px] bg-center bg-cover" style="background-image: url('./assets/images/hero-img.jpg');">
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
     <div class="container mx-auto px-4 h-full flex flex-col justify-center relative z-10">
         <h1 class="text-5xl md:text-6xl font-bold mb-4">Metro Manila's #1<br>model Service.</h1>
         <p class="text-4xl mb-6">We Are Open 24/7</p>
-        <p class="text-xl mb-8 max-w-lg">Drama and Scam free environment!<br>Browse and enjoy the best model<br>agency in the Philippines!</p>
+        <p class="text-xl mb-8 max-w-lg">Drama and Scam free environment!<br>Browse and enjoy the best model agency in the Philippines!</p>
       </div>
   </section>
   
   <!-- Navigation Options -->
-  <section class="filter-navigation">
+
+  <section class="filter-navigation" >
     <div class="container">
       <div class="nav-buttons">
-        <a href="#" class="nav-button">
+        <button href="#" class="nav-button">
           Name ▼
         </a>
-        <a href="#" class="nav-button">
+        <button href="#" class="nav-button">
           Services ▼
         </a>
-        <a href="#" class="nav-button">
+        <button href="#" class="nav-button">
           Age ▼
         </a>
-        <a href="#" class="nav-button">
+        <button href="#" class="nav-button">
           Price ▼
         </a>
-        <a href="#" class="nav-button">
+        <button href="#" class="nav-button">
           Location ▼
         </a>
-        <a href="#" class="nav-button">
+        <button href="#" class="nav-button">
           Nationality ▼
         </a>
-        <a href="#" class="nav-button">
+        <button href="#" class="nav-button">
           Popular Galleries ▼
         </a>
-        <a href="#" class="nav-button">
+        <button href="#" class="nav-button">
           Filter by Services ☰
         </a>
       </div>
@@ -87,7 +100,7 @@
         <!-- VIP escort 1 -->
         <div class="bg-black border border-yellow-600 rounded overflow-hidden">
           <div class="relative">
-            <img src="/images/image.png" alt="model escort" class="w-full h-64 object-cover">
+            <img src="./assets/images/image.png" alt="model escort" class="w-full h-64 object-cover">
             <div class="absolute top-0 left-0 bg-yellow-600 text-black px-3 py-1">
               <div class="text-sm font-bold">VIP escort</div>
               <div class="text-xs">Popular Choice</div>
@@ -102,7 +115,7 @@
         <!-- escort 2 -->
         <div class="bg-black border border-gray-800 rounded overflow-hidden">
           <div class="relative">
-            <img src="/images/image.png" alt="model escort" class="w-full h-64 object-cover">
+            <img src="./assets/images/image.png" alt="model escort" class="w-full h-64 object-cover">
           </div>
           <div class="p-4">
             <h3 class="font-bold">Michael</h3>
@@ -113,7 +126,7 @@
         <!-- escort 3 -->
         <div class="bg-black border border-gray-800 rounded overflow-hidden">
           <div class="relative">
-            <img src="/images/image.png" alt="model escort" class="w-full h-64 object-cover">
+            <img src="./assets/images/image.png" alt="model escort" class="w-full h-64 object-cover">
           </div>
           <div class="p-4">
             <h3 class="font-bold">Jessica</h3>
@@ -124,7 +137,7 @@
         <!-- escort 4 -->
         <div class="bg-black border border-gray-800 rounded overflow-hidden">
           <div class="relative">
-            <img src="/images/image.png" alt="model escort" class="w-full h-64 object-cover">
+            <img src="./assets/images/image.png" alt="model escort" class="w-full h-64 object-cover">
           </div>
           <div class="p-4">
             <h3 class="font-bold">David</h3>
@@ -316,7 +329,7 @@
             <span class="reviewer-name">SARAH</span>
           </div>
           <div class="review-content">
-            <img src="/images/review_img.png" alt="Sarah" class="reviewer-img">
+            <img src="./assets/images/review_img.png" alt="Sarah" class="reviewer-img">
             <div class="review-text">
               "Sarah is super knowledgeable, even better in person! I booked her for a tour and a half day and it was a exceptional experience, even though she is young she is very experienced..."
               <a href="#" class="read-more">read more »</a>
@@ -339,7 +352,7 @@
             <span class="reviewer-name">MICHAEL</span>
           </div>
           <div class="review-content">
-            <img src="/images/review_img.png" alt="Michael" class="reviewer-img">
+            <img src="./assets/images/review_img.png" alt="Michael" class="reviewer-img">
             <div class="review-text">
               "Michael is super professional, even better in person! I booked him for a day tour and it was a exceptional experience, even though he is young he is very knowledgeable..."
               <a href="#" class="read-more">read more »</a>
@@ -362,7 +375,7 @@
             <span class="reviewer-name">JESSICA</span>
           </div>
           <div class="review-content">
-            <img src="/images/review_img.png" alt="Jessica" class="reviewer-img">
+            <img src="./assets/images/review_img.png" alt="Jessica" class="reviewer-img">
             <div class="review-text">
               "Jessica is super friendly, even better in person! I booked her for a city tour and it was a exceptional experience, even though she is young she is very professional..."
               <a href="#" class="read-more">read more »</a>
@@ -498,73 +511,31 @@
   </div>
 </section>
 
+
+
   <!-- Footer -->
-  <footer class="py-10 bg-black border-t border-gray-800">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-        <div>
-          <h3 class="font-bold mb-4 gold-text">Links</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Terms & Conditions</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Cancellation Agreement</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Resources</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold mb-4 gold-text">Policies and Legal</h3>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-400 hover:text-white">Copyright Notice</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">DMCA Policy</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Search Policy</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Content escortlines</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Law Enforcement</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white">Anti-Spam Policy</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold mb-4 gold-text">Services Areas</h3>
-          <div class="grid grid-cols-3 gap-2">
-            <div>
-              <h4 class="font-semibold mb-2 text-sm">Female escorts</h4>
-              <ul class="space-y-1 text-xs">
-                <li><a href="#" class="text-gray-400 hover:text-white">Asia</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Europe</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Americas</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold mb-2 text-sm">Male escorts</h4>
-              <ul class="space-y-1 text-xs">
-                <li><a href="#" class="text-gray-400 hover:text-white">Asia</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Europe</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Americas</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="font-semibold mb-2 text-sm">VIP escorts</h4>
-              <ul class="space-y-1 text-xs">
-                <li><a href="#" class="text-gray-400 hover:text-white">Global</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Exclusive</a></li>
-                <li><a href="#" class="text-gray-400 hover:text-white">Luxury</a></li>
-              </ul>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-logo">
+            <a href="index.html"><img src="./assets/images/courtesans-logo-2 1.png"></a>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Manila Luxury model. All Rights Reserved.</p>
-        <div class="flex space-x-4">
-          <img src="/api/placeholder/40/25" alt="Payment Method" class="h-6">
-          <img src="/api/placeholder/40/25" alt="Payment Method" class="h-6">
-          <img src="/api/placeholder/40/25" alt="Payment Method" class="h-6">
-          <img src="/api/placeholder/40/25" alt="Payment Method" class="h-6">
-        </div>
-      </div>
-    </div>
-  </footer>
+          
+          <nav class="footer-nav">
+            <a href="index.html" class="footer-link">Home</a>
+            <a href="gallery.html" class="footer-link">Gallery</a>
+            <a href="rates.html" class="footer-link">Rates</a>
+            <a href="casting.html" class="footer-link">Casting</a>
+            <a href="faqs.html" class="footer-link">FAQs</a>
+            <a href="contact.html" class="footer-link">Contact Us</a>
+          </nav>
+          
+          <div class="copyright" style="background-color: #2563EB;">
+            <p>Copyright 2007-2025 Manila Courtesans – Finest Manila Escorts All rights reserved</p>
+          </div>
+        
+      </footer>
 
   <script>
     // Simple JavaScript for mobile menu toggle
