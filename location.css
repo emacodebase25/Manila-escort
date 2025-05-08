@@ -18,15 +18,17 @@
   }
 
   .filter-navigation {
-    background-color: #000000;
+    background-color: var(--manila-blue);
     padding: 8px 0;
+
   }
   
-  .container {
+  .container1 {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    background-color: var(--manila-blue);
   }
   
   .nav-buttons {
@@ -36,8 +38,8 @@
   }
   
   .nav-button {
-    background-color: #2563eb; /* blue-600 */
-    color: white;
+    background-color: #fff; /* blue-600 */
+    color: rgb(0, 0, 0);
     padding: 8px 16px;
     border-radius: 6px;
     text-decoration: none;
@@ -422,7 +424,7 @@
   }
   
   /* Reviews Section */
-  .reviews-section {
+  /* .reviews-section {
     padding: 2.5rem 0;
     background-color: #000000;
   }
@@ -537,7 +539,148 @@
     color: var(--blue-600);
     font-size: 0.875rem;
   }
+
+ */
+
+  /* updated review */
+  .review-section-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+  }
   
+  .review-carousel {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    overflow-x: auto;
+    padding: 20px 0;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .review-carousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  .review-item {
+    display: flex;
+    flex: 0 0 auto;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .review-image-container {
+    width: 40%;
+    background-color: #4a0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .review-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .review-content {
+    width: 60%;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #fffff0;
+  }
+  
+  .review-date {
+    color: #666;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+  
+  .review-category {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+  
+  .stars {
+    color: #F97316;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+  
+  .review-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-top: 8px;
+    position: relative;
+  }
+  
+  .quote-mark {
+    color: #6E59A5;
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    left: -12px;
+  }
+  
+  .read-more {
+    color: #6E59A5;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+  
+  .reviewer-name {
+    background-color: #F97316;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  @media (max-width: 1200px) {
+    .review-carousel {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .review-item {
+      width: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .review-carousel {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .review-item {
+      width: 100%;
+      max-width: 350px;
+    }
+  }
+
   /* Magazine Section */
   .magazine-section {
     padding: 2.5rem 0;
@@ -688,3 +831,8 @@
     font-size: 0.875rem;
   }
   
+
+
+  /* filter section
+   */
+   

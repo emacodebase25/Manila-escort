@@ -12,6 +12,150 @@
     <link rel="stylesheet" href="index.css">
     <script src="main.js"></script>
 
+
+    <style>
+      
+      .review-section-container {
+        width: 100%;
+        min-height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background-color: #080B13;
+      }
+      
+      .review-carousel {
+        display: flex;
+        gap: 20px;
+        max-width: 1200px;
+        overflow-x: auto;
+        padding: 20px 0;
+        scrollbar-width: none; /* Firefox */
+      }
+      
+      .review-carousel::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+      }
+      
+      .review-item {
+        display: flex;
+        flex: 0 0 auto;
+        width: 350px;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        position: relative;
+      }
+      
+      .review-image-container {
+        width: 40%;
+        background-color: #4a0000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      
+      .review-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      
+      .review-content {
+        width: 60%;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background-color: #fffff0;
+      }
+      
+      .review-date {
+        color: #666;
+        font-size: 0.8rem;
+        margin-bottom: 5px;
+      }
+      
+      .review-category {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        width: 250px;
+        font-size: 0.9rem;
+        line-height: 1;
+        color: #080B13;
+      }
+      
+      .stars {
+        color: #F97316;
+        font-size: 1rem;
+        letter-spacing: 2px;
+      }
+      
+      .review-text {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-top: 8px;
+        position: relative;
+        color: #080B13;
+      }
+      
+      .quote-mark {
+        color: #4169E1;
+        font-size: 1.5rem;
+        font-weight: bold;
+        position: absolute;
+        top: -10px;
+        left: -12px;
+      }
+      
+      .read-more {
+        color: #4169E1;
+        cursor: pointer;
+        font-size: 0.8rem;
+      }
+      
+      .reviewer-name {
+        background-color: #F97316;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        align-self: flex-start;
+        margin-top: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      }
+      
+      @media (max-width: 1200px) {
+        .review-carousel {
+          padding: 20px;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .review-item {
+          width: 300px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .review-carousel {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .review-item {
+          width: 100%;
+          max-width: 350px;
+        }
+      }
+    </style>
+     
   </head>
 
   <body>
@@ -65,8 +209,8 @@
           
           <!-- Navigation Options -->
         
-          <section class="filter-navigation" >
-            <div class="container">
+          <section class="filter-navigation"  style="color: #2563EB;">
+            <div class="container1" style="color: #2563EB;" important>
               <div class="nav-buttons">
                 <button href="#" class="nav-button">
                   Name ▼
@@ -219,7 +363,7 @@
           </h2>
           
           <div class="galleries-grid">
-            <button class="gallery-btn yellow">Busty Escorts</button>
+            <button class="gallery-btn white">Busty Escorts</button>
             <button class="gallery-btn white">Brunette Escorts</button>
             <button class="gallery-btn white">Party Girl Escorts</button>
             <button class="gallery-btn white">Petit Escorts</button>
@@ -235,89 +379,92 @@
 
     <section >
       <!-- Reviews Section -->
-      <div class="reviews-section">
-        <div class="container">
-          <div class="reviews-header">
-            <h2 class="section-title">Latest reviews of our services</h2>
-            <div class="reviews-nav">
-              <button class="review-nav-btn">
-                <span class="chevron-left"></span>
-              </button>
-              <button class="review-nav-btn">
-                <span class="chevron-right"></span>
-              </button>
+
+      <div class="review-section-container">
+        <div class="review-carousel">
+          <div class="review-item">
+            <div class="review-image-container">
+              <img 
+                src="/assets/images/front-view-woman-bdsm-aesthetics_23-2151117244 1.jpg" 
+                alt="Reviewer" 
+                class="review-image" 
+              />
+            </div>
+            <div class="review-content">
+              <div class="review-date">November '24</div>
+              <div class="review-category">
+                <span>Looks: </span>
+                <span class="stars">★ ★ ★ ★ ☆</span>
+              </div>
+              <div class="review-category">
+                <span>Performance: </span>
+                <span class="stars">★ ★ ★ ★ ☆</span>
+              </div>
+              <div class="review-text">
+                <span class="quote-mark">"</span>
+                Lorem ipsum dolor sit amet consectetur. Faucibus augue amet ut tellus. Sem varius sollicitudin tellus ipsum. Non volutpat eu elit suspendisse sed tristique. Commodo vulputate non morbi pharetra
+                <span class="read-more"> Read more...</span>
+              </div>
+              <div class="reviewer-name">Debrah</div>
             </div>
           </div>
-          
-          <div class="reviews-grid">
-            <div class="review-card">
-              <div class="review-header">
-                <div class="review-date">September '22</div>
-                <div class="review-stars">
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                </div>
-              </div>
-              <p class="review-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget amet et nibh. 
-                Fusce eu egestas et nibh. Sale vitae vestibulum nibh. Sale volutpat nibh eu elit.
-                Vestibulum eget amet et nibh. Sale volutpat et nibh eu volutpat primere.
-              </p>
-              <div class="review-footer">
-                <button class="escort-name-btn">Christina</button>
-                <button class="read-more-btn">Read more...</button>
-              </div>
+    
+          <div class="review-item">
+            <div class="review-image-container">
+              <img 
+                src="/assets/images/front-view-woman-bdsm-aesthetics_23-2151117244 1.jpg" 
+                alt="Reviewer" 
+                class="review-image" 
+              />
             </div>
-            
-            <div class="review-card">
-              <div class="review-header">
-                <div class="review-date">September '22</div>
-                <div class="review-stars">
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                </div>
+            <div class="review-content">
+              <div class="review-date">November '24</div>
+              <div class="review-category">
+                <span>Looks: </span>
+                <span class="stars">★ ★ ★ ★ ☆</span>
               </div>
-              <p class="review-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget amet et nibh. 
-                Fusce eu egestas et nibh. Sale vitae vestibulum nibh. Sale volutpat nibh eu elit.
-                Vestibulum eget amet et nibh. Sale volutpat et nibh eu volutpat primere.
-              </p>
-              <div class="review-footer">
-                <button class="escort-name-btn">Sophia</button>
-                <button class="read-more-btn">Read more...</button>
+              <div class="review-category">
+                <span>Performance: </span>
+                <span class="stars">★ ★ ★ ★ ☆</span>
               </div>
+              <div class="review-text">
+                <span class="quote-mark">"</span>
+                Lorem ipsum dolor sit amet consectetur. Faucibus augue amet ut tellus. Sem varius sollicitudin tellus ipsum. Non volutpat eu elit suspendisse sed tristique. Commodo vulputate non morbi pharetra
+                <span class="read-more"> Read more...</span>
+              </div>
+              <div class="reviewer-name">Debrah</div>
             </div>
-            
-            <div class="review-card">
-              <div class="review-header">
-                <div class="review-date">September '22</div>
-                <div class="review-stars">
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="star"></span>
-                </div>
+          </div>
+    
+          <div class="review-item">
+            <div class="review-image-container">
+              <img 
+                src="/assets/images/front-view-woman-bdsm-aesthetics_23-2151117244 1.jpg" 
+                alt="Reviewer" 
+                class="review-image" 
+              />
+            </div>
+            <div class="review-content">
+              <div class="review-date">November '24</div>
+              <div class="review-category">
+                <span>Looks: </span>
+                <span class="stars">★ ★ ★ ★ ☆</span>
               </div>
-              <p class="review-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eget amet et nibh. 
-                Fusce eu egestas et nibh. Sale vitae vestibulum nibh. Sale volutpat nibh eu elit.
-                Vestibulum eget amet et nibh. Sale volutpat et nibh eu volutpat primere.
-              </p>
-              <div class="review-footer">
-                <button class="escort-name-btn">Maria</button>
-                <button class="read-more-btn">Read more...</button>
+              <div class="review-category">
+                <span>Performance: </span>
+                <span class="stars">★ ★ ★ ★ ☆</span>
               </div>
+              <div class="review-text">
+                <span class="quote-mark">"</span>
+                Lorem ipsum dolor sit amet consectetur. Faucibus augue amet ut tellus. Sem varius sollicitudin tellus ipsum. Non volutpat eu elit suspendisse sed tristique. Commodo vulputate non morbi pharetra
+                <span class="read-more"> Read more...</span>
+              </div>
+              <div class="reviewer-name">Debrah</div>
             </div>
           </div>
         </div>
-      </div>
+      </div>  
+
     </section>  
       
       <!-- Magazine Section -->

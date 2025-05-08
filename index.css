@@ -169,19 +169,26 @@
     display: none;
   }
 }
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
 
 
 /* Navigation bar styles */
 .filter-navigation {
-    background-color: #000000;
     padding: 8px 0;
+    background-color: #4272E9;
   }
   
-  .container {
+  .container1 {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    background-color: #4272E9;
   }
   
   .nav-buttons {
@@ -191,8 +198,8 @@
   }
   
   .nav-button {
-    background-color: #2563eb; /* blue-600 */
-    color: white;
+    background-color: #f7f8fa; /* blue-600 */
+    color: black;
     padding: 8px 16px;
     border-radius: 6px;
     text-decoration: none;
