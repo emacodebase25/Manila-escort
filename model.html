@@ -1,0 +1,1089 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companion Service Page</title>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    body {
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    
+ 
+    /* header */
+
+.header {
+  background-color: #4169E1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  position: relative;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background-color: #FFA500;
+  border-radius: 3px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-arrow::after {
+  content: '▾';
+  margin-left: 4px;
+  font-size: 12px;
+  transition: transform 0.15s ease;
+}
+
+.dropdown:hover .dropdown-arrow::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(5px);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 16px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.vip-button {
+  display: inline-block;
+  color: #FFA500;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid #FFA500;
+  border-radius: 9999px;
+  padding: 8px 32px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.15s ease;
+}
+
+.vip-button:hover {
+  background-color: #FFA500;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.vip-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+}
+   
+    /* Main Content */
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    /* Profile Section */
+    .profile-section {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    
+    .profile-image-container {
+      width: 300px;
+      position: relative;
+    }
+    
+    .profile-image {
+      width: 100%;
+      border-radius: 5px;
+      height: auto;
+    }
+    
+    .dots-navigation {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+    
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: rgba(255,255,255,0.5);
+      border-radius: 50%;
+    }
+    
+    .dot.active {
+      background-color: #ffd700;
+    }
+    
+    .profile-info {
+      flex: 1;
+      padding-left: 20px;
+    }
+    
+    .profile-header {
+      margin-bottom: 10px;
+    }
+    
+    .profile-name {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    
+    .rate-highlight {
+      background-color: #4169e1;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    
+    .details-container {
+      display: flex;
+    }
+    
+    .details-column {
+      flex: 1;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 15px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    
+    .details-column:last-child {
+      margin-right: 0;
+    }
+    
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 5px;
+    }
+    
+    .detail-label {
+      font-weight: bold;
+      color: #ccc;
+    }
+    
+    .detail-value {
+      text-align: right;
+    }
+    
+    /* Rates Table */
+    .rates-section {
+      margin-bottom: 30px;
+    }
+    
+    .section-title {
+      color: #ffd700;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .rates-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .rates-table th {
+      background-color: #4169e1;
+      padding: 10px;
+      text-align: left;
+    }
+    
+    .rates-table td {
+      padding: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .rates-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .price {
+      color: #ffd700;
+    }
+    
+    /* Action Buttons */
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+    
+    .book-button {
+      background-color: #4169e1;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      flex: 1;
+    }
+    
+    .review-button {
+      background-color: transparent;
+      color: white;
+      border: 1px solid white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Services Section */
+    .services-section {
+      background-color: #4169e1;
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+    
+    .services-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .services-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    
+    .services-tags {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    
+    .service-tag {
+      background-color: rgba(255,255,255,0.2);
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    /* Location Section */
+    .location-section {
+      display: flex;
+      margin-bottom: 30px;
+    }
+    
+    .contact-details {
+      flex: 1;
+      background-color: #4169e1;
+      padding: 20px;
+      border-radius: 5px;
+      margin-right: 20px;
+    }
+    
+    .contact-title {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 15px;
+    }
+    
+    .contact-icon {
+      margin-right: 10px;
+      font-size: 20px;
+    }
+    
+    .map-container {
+      flex: 1;
+      height: 200px;
+      background-color: #333;
+      border-radius: 5px;
+      position: relative;
+    }
+    
+    .map-attribution {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      color: white;
+      font-size: 12px;
+    }
+
+    .mapImage{
+      height: 200px;
+      width: 550px;
+    }
+    
+    /* Reviews Section */
+    .reviews-section {
+      margin-bottom: 30px;
+    }
+    
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    .review-stats {
+      font-size: 14px;
+    }
+    
+    .stars {
+      color: #ffd700;
+      margin-right: 5px;
+    }
+    
+    .review-filter {
+      display: flex;
+      margin-bottom: 15px;
+      background-color: #333;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .filter-button {
+      padding: 8px 15px;
+      border: none;
+      background-color: transparent;
+      color: white;
+      cursor: pointer;
+    }
+    
+    .filter-button.active {
+      background-color: #4169e1;
+    }
+    
+    .review-card {
+      background-color: #222;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    
+    .reviewer-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .review-date {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 10px;
+    }
+    
+    .review-text {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    /* FAQ Section */
+    .faq-section {
+      margin-bottom: 30px;
+    }
+    
+    .faq-item {
+      margin-bottom: 10px;
+    }
+    
+    .faq-question {
+      background-color: #4169E1;
+      padding: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-answer {
+      padding: 15px;
+      background-color: #333;
+      border-radius: 0 0 5px 5px;
+      margin-top: 1px;
+      font-size: 14px;
+    }
+    
+    /* Nearby Section */
+    .nearby-section {
+      background-color: #4169e1;
+      padding: 30px 0;
+    }
+    
+    .nearby-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .nearby-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    
+    .nearby-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    
+    .nearby-card {
+      background-color: white;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .nearby-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .nearby-info {
+      padding: 15px;
+      color: black;
+    }
+    
+    .nearby-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .nearby-age {
+      color: #666;
+      margin-bottom: 5px;
+    }
+    
+    .nearby-location {
+      color: #666;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    
+    .nearby-rate {
+      display: inline-block;
+      background-color: #4169e1;
+      color: white;
+      padding: 3px 8px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+    
+    /* Navigation Dots */
+    .navigation-dots {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      margin-top: 20px;
+    }
+    
+ /* Footer */
+ .footer {
+  background-color: var(--manila-dark);
+  border-top: 1px solid var(--gray-800);
+  padding: 3rem 0;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo-text {
+  color: var(--manila-gold);
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.logo-subtitle {
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.footer-link {
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: var(--manila-gold);
+}
+
+.copyright {
+  text-align: center;
+  color: var(--gray-400);
+  font-size: 0.875rem;
+}
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .profile-section {
+        flex-direction: column;
+      }
+      
+      .profile-image-container {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      
+      .details-container {
+        flex-direction: column;
+      }
+      
+      .details-column {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      
+      .location-section {
+        flex-direction: column;
+      }
+      
+      .contact-details {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+      
+      .nearby-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .nearby-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .main-nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+         <a href="index.html"> <img src="./assets/images/logo 1.png"></a>
+        </div>
+        
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link dropdown-arrow">Gallery</a>
+
+            </li>
+            <li class="dropdown">
+              <a href="#" class="nav-link  dropdown-arrow">Services</a>
+
+            </li>
+            <li class="dropdown">
+              <a href="location.html" class="nav-link dropdown-arrow">Location</a>
+
+            </li>
+            <li><a href="#" class="nav-link">Rates</a></li>
+            <li><a href="casting.html" class="nav-link">Casting</a></li>
+            <li><a href="#" class="nav-link">Booking</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="vip-section">
+          <a href="#" class="vip-button">VIP ESCORTS</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-container">
+    <!-- Profile Section -->
+    <section class="profile-section">
+      <div class="profile-image-container">
+        <img src="/assets/images/je14 1.jpg" alt="Profile" class="profile-image">
+        <div class="dots-navigation">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+      
+      <div class="profile-info">
+        <div class="profile-header">
+          <h1 class="profile-name">Jelai (19)</h1>
+          <div class="rate-highlight">7000 for 2 hours, 14000 for overnight</div>
+        </div>
+        
+        <div class="details-container">
+          <div class="details-column">
+            <h3>Figure Details</h3>
+            <div class="detail-row">
+              <span class="detail-label">Age:</span>
+              <span class="detail-value">19</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Height:</span>
+              <span class="detail-value">5'11</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Weight:</span>
+              <span class="detail-value">45kg</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Statistics:</span>
+              <span class="detail-value">34A / 23 / 34</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Body type:</span>
+              <span class="detail-value">Slim Petit</span>
+            </div>
+          </div>
+          
+          <div class="details-column">
+            <h3>Other Details</h3>
+            <div class="detail-row">
+              <span class="detail-label">Location:</span>
+              <span class="detail-value">Bacoor Cavite</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Nationality:</span>
+              <span class="detail-value">Filipino</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Tattoos:</span>
+              <span class="detail-value">None</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Piercings:</span>
+              <span class="detail-value">None</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Kids:</span>
+              <span class="detail-value">None</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Languages:</span>
+              <span class="detail-value">English (Fluent)<br>Filipino (Fluent)</span>
+            </div>
+          </div>
+          
+          <div class="details-column">
+            <h3>&nbsp;</h3>
+            <div class="detail-row">
+              <span class="detail-label">Smoking:</span>
+              <span class="detail-value">None</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Shaved:</span>
+              <span class="detail-value">Yes</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Drinking:</span>
+              <span class="detail-value">Occasionally</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Complexion:</span>
+              <span class="detail-value">Fair</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Disability:</span>
+              <span class="detail-value">None</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Braces:</span>
+              <span class="detail-value">None</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Rates Section -->
+    <section class="rates-section">
+      <h2 class="section-title">Rates</h2>
+      <table class="rates-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Rounds</th>
+            <th>Outcall</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 Hour</td>
+            <td>1 Round</td>
+            <td><span class="price">6500 PHP (120 USD)</span></td>
+          </tr>
+          <tr>
+            <td>2 Hour</td>
+            <td>2 Round</td>
+            <td><span class="price">7000 PHP (125 USD)</span></td>
+          </tr>
+          <tr>
+            <td>3 Hour</td>
+            <td>2 Round</td>
+            <td><span class="price">8500 PHP (155 USD)</span></td>
+          </tr>
+          <tr>
+            <td>6 Hour</td>
+            <td>2 Round</td>
+            <td><span class="price">8500 PHP (155 USD)</span></td>
+          </tr>
+          <tr>
+            <td>12 Hour</td>
+            <td>2 Round</td>
+            <td><span class="price">8500 PHP (155 USD)</span></td>
+          </tr>
+          <tr>
+            <td>24 Hour</td>
+            <td>2 Round</td>
+            <td><span class="price">8500 PHP (155 USD)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button class="book-button">Book Jelai Now</button>
+      <button class="review-button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Leave a Review
+      </button>
+    </div>
+  </div>
+  
+  <!-- Services Section -->
+  <section class="services-section">
+    <div class="services-container">
+      <h2 class="services-title">Services</h2>
+      <div class="services-tags">
+        <div class="service-tag">69 Position</div>
+        <div class="service-tag">Bareback Blow job</div>
+        <div class="service-tag">69 Position</div>
+        <div class="service-tag">Bareback Blow job</div>
+        <div class="service-tag">Bareback Blow job</div>
+        <div class="service-tag">69 Position</div>
+        <div class="service-tag">Bareback Blow job</div>
+        <div class="service-tag">69 Position</div>
+        <div class="service-tag">Bareback Blow job</div>
+        <div class="service-tag">69 Position</div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="main-container">
+    <!-- Location Section -->
+    <section class="location-section">
+      <div class="contact-details">
+        <h3 class="contact-title">Location and contact details:</h3>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>9876543210 / 9876432310</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>Lorem ipsum dolor sit amet consectetur, Purus nibh posuere sed purus.</div>
+        </div>
+      </div>
+      <div class="map-container">
+        <img src="/assets/images/gettyimages-1461672520-612x612 1.jpg" class="mapImage">
+      </div>
+    </section>
+    
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+      <div class="review-header">
+        <h2 class="section-title">Reviews of Jelai</h2>
+        <button class="review-button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Leave a Review
+        </button>
+      </div>
+      
+      <div class="review-stats">
+        Average
+        <div class="stars">★★★★★</div>
+        5/5 (4 reviews)
+      </div>
+      
+      <div class="review-filter">
+        <button class="filter-button active">All</button>
+        <button class="filter-button">Short</button>
+        <button class="filter-button">Long</button>
+        <button class="filter-button">Incall</button>
+        <button class="filter-button">Outcall</button>
+      </div>
+      
+      <div class="review-container">
+        <div class="review-card">
+          <div class="reviewer-name">Max</div>
+          <div class="stars">★★★★★</div>
+          <div class="review-date">Small, 1 hour, seen on 24th July</div>
+          <div class="review-text">
+            Lorem ipsum dolor sit amet consectetur. Et id convallis risus nisi commodo. Sed et accumsan et at imperdiet sollicitudin et. Eu commencer risus sed consequat porttorque elementum eros pulvinar pellentesque. Sapien justo et at tortor hendrerit. Urna libero eros pharetra vitae amet et erat sed sollicitudin.
+          </div>
+        </div>
+        
+        <div class="review-card">
+          <div class="reviewer-name">Max</div>
+          <div class="stars">★★★★★</div>
+          <div class="review-date">Small, 1 hour, seen on 24th July</div>
+          <div class="review-text">
+            Lorem ipsum dolor sit amet consectetur. Et id convallis risus nisi commodo. Sed et accumsan et at imperdiet sollicitudin et. Eu commencer risus sed consequat porttorque elementum eros pulvinar pellentesque. Sapien justo et at tortor hendrerit. Urna libero eros pharetra vitae amet et erat sed sollicitudin.
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          How do I book Jelai
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Lorem ipsum dolor sit amet consectetur. Sed id consectetur sit eu sem. Imperdiet quia convallis id pellentesque arcu porttitor amet, nisi pharetra posuere cras amet velit, commodo eu capienda lignum netus suas iis sem massa sed passim amet.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          What are Jelai's working hours
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Lorem ipsum dolor sit amet consectetur. Sed id consectetur sit eu sem. Imperdiet quia convallis id pellentesque arcu porttitor amet, nisi pharetra posuere cras amet velit.
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          What are Jelai's working hours
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          Lorem ipsum dolor sit amet consectetur. Sed id consectetur sit eu sem. Imperdiet quia convallis id pellentesque arcu porttitor amet, nisi pharetra posuere cras amet velit.
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Nearby Section -->
+  <section class="nearby-section">
+    <div class="nearby-container">
+      <h2 class="nearby-title">Nearby Escorts</h2>
+      <div class="nearby-grid">
+        <div class="nearby-card">
+          <a href="model.html">
+          <img src="/assets/images/medium-shot-woman-bdsm-aesthetics_23-2151117234 1.jpg" alt="Escort" class="nearby-image">
+          <div class="nearby-info">
+            <div class="nearby-name">Eli</div>
+            <div class="nearby-age">Age 25</div>
+            <div class="nearby-location">Location: Baguio</div>
+            <div class="nearby-rate">₱5000/HR</div>
+          </div>
+        </a>
+        </div>
+        
+        <div class="nearby-card">
+          <a href="model.html">
+          <img src="/assets/images/medium-shot-woman-bdsm-aesthetics_23-2151117234 1.jpg" alt="Escort" class="nearby-image">
+          <div class="nearby-info">
+            <div class="nearby-name">Eli</div>
+            <div class="nearby-age">Age 26</div>
+            <div class="nearby-location">Location: Baguio</div>
+            <div class="nearby-rate">₱5000/HR</div>
+          </div>
+        </a>
+        </div>
+        
+        <div class="nearby-card">
+          <a href="model.html">
+          <img src="/assets/images/medium-shot-woman-bdsm-aesthetics_23-2151117234 1.jpg" alt="Escort" class="nearby-image">
+          <div class="nearby-info">
+            <div class="nearby-name">Eli</div>
+            <div class="nearby-age">Age 24</div>
+            <div class="nearby-location">Location: Baguio</div>
+            <div class="nearby-rate">₱5000/HR</div>
+          </div>
+          </a>
+        </div>
+        
+        <div class="nearby-card">
+          <a href="model.html">
+          <img src="/assets/images/medium-shot-woman-bdsm-aesthetics_23-2151117234 1.jpg" alt="Escort" class="nearby-image">
+          <div class="nearby-info">
+            <div class="nearby-name">Eli</div>
+            <div class="nearby-age">Age 23</div>
+            <div class="nearby-location">Location: Baguio</div>
+            <div class="nearby-rate">₱5000/HR</div>
+          </div>
+        </a>
+        </div>
+      </div>
+      
+      <div class="navigation-dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <a href="index.html"><img src="./assets/images/courtesans-logo-2 1.png"></a>
+        </div>
+      </div>
+      
+      <nav class="footer-nav">
+        <a href="index.html" class="footer-link">Home</a>
+        <a href="gallery.html" class="footer-link">Gallery</a>
+        <a href="rates.html" class="footer-link">Rates</a>
+        <a href="casting.html" class="footer-link">Casting</a>
+        <a href="faqs.html" class="footer-link">FAQs</a>
+        <a href="contact.html" class="footer-link">Contact Us</a>
+      </nav>
+      
+      <div class="copyright" style="background-color: #2563EB;">
+        <p>Copyright 2007-2025 Manila Courtesans – Finest Manila Escorts All rights reserved</p>
+      </div>
+    
+  </footer>
+</body>
+</html>
