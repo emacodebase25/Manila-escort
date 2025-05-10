@@ -52,6 +52,7 @@
   text-decoration: none;
   font-size: 24px;
   font-weight: 500;
+  
 }
 
 .nav-menu {
@@ -236,12 +237,12 @@
   /* Additional CSS for Reviews Section */
 
 .reviews-section {
-    background-color: #2563eb; /* Blue background */
+    background-color: #4169E1; /* Blue background */
     padding: 40px 0;
     color: #ffffff;
   }
   
-  .reviews-container {
+  /* .reviews-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -263,7 +264,7 @@
   }
   
   .reviewer-name {
-    color: #2563eb; /* Blue text */
+    color: #2563eb; 
     font-weight: bold;
     font-size: 18px;
   }
@@ -283,7 +284,7 @@
   
   .review-text {
     font-size: 14px;
-    color: #2563eb; /* Blue text */
+    color: #2563eb; 
     line-height: 1.4;
   }
   
@@ -317,10 +318,10 @@
   }
   
   .stars {
-    color: #ffc107; /* Gold star color */
+    color: #ffc107;  
     margin-right: 10px;
   }
-  
+   */
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .reviews-container {
@@ -342,7 +343,7 @@
   }
   
   .text-paragraph-section h2 {
-    font-size: 28px;
+    font-size: 52px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #ffffff;
@@ -367,7 +368,7 @@
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .text-paragraph-section h2 {
-      font-size: 24px;
+      font-size: 48px;
     }
     
     .text-paragraph-section h3 {
@@ -380,72 +381,6 @@
   }
 
   /* Additional CSS for FAQ Section */
-
-.faq-section {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 40px 0;
-  }
-  
-  .faq-section h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #ffffff;
-    text-align: center;
-  }
-  
-  .faq-section p.text-center {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    font-size: 16px;
-  }
-  
-  .faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .faq-item {
-    margin-bottom: 2px;
-    overflow: hidden;
-  }
-  
-  .faq-question {
-    background-color: #2563eb; /* Blue background */
-    padding: 15px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .faq-icon {
-    margin-right: 15px;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  .faq-answer {
-    background-color: #000000; /* Black background */
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .faq-answer.open {
-    padding: 20px;
-    max-height: 500px;
-  }
-  
-  .faq-answer p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
-  }
 
   /* Additional CSS for Category Section */
 
