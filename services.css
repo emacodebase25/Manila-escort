@@ -1,0 +1,655 @@
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #080b13;
+      color: #ffffff;
+    }
+    .hero {
+ 
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+    }
+    .gold-text {
+      color: #d4af37;
+    }
+    .gold-border {
+      border-color: #d4af37;
+    }
+    .vip-box {
+      border: 2px solid #d4af37;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .blue-section {
+      background-color: #1e3a8a;
+    }
+/* header */
+
+.header {
+  background-color: #4169E1;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  position: relative;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.15s ease;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link.active {
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background-color: #FFA500;
+  border-radius: 3px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-arrow::after {
+  content: '▾';
+  margin-left: 4px;
+  font-size: 12px;
+  transition: transform 0.15s ease;
+}
+
+.dropdown:hover .dropdown-arrow::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(5px);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 16px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.vip-button {
+  display: inline-block;
+  color: #FFA500;
+  text-decoration: none;
+  background-color: transparent;
+  border: 2px solid #FFA500;
+  border-radius: 9999px;
+  padding: 8px 32px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.15s ease;
+}
+
+.vip-button:hover {
+  background-color: #FFA500;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.vip-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+
+/* Navigation bar styles */
+.filter-navigation {
+    background-color: #000000;
+    padding: 8px 0;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+  }
+  
+  .nav-button {
+    background-color: #2563eb; /* blue-600 */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    margin: 0 4px;
+    font-weight: 500;
+  }
+  
+  .nav-button:hover {
+    background-color: #1d4ed8; /* slightly darker blue */
+  }
+  
+  /* Hide scrollbar but allow scrolling on mobile */
+  .nav-buttons::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .nav-buttons {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .nav-buttons {
+      justify-content: flex-start;
+    }
+    
+    .nav-button {
+      flex-shrink: 0;
+    }
+  }
+
+  /* Additional CSS for Reviews Section */
+
+.reviews-section {
+    background-color: #2563eb; /* Blue background */
+    padding: 40px 0;
+    color: #ffffff;
+  }
+
+/* review section */
+.reviews-container{
+  background: #4169E1;
+
+}
+.reviews-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+
+.review-card {
+      background-color: white;
+      border-radius: 10px;
+      width: 300px;
+      padding: 20px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .reviewer-name {
+      color: #1EAEDB;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .review-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 5px;
+      object-fit: cover;
+      margin-right: 15px;
+      float: left;
+    }
+    
+    .review-text {
+      color: #333;
+      line-height: 1.4;
+      margin-bottom: 15px;
+      font-size: 14px;
+
+    }
+    
+    .read-more {
+      color: #1EAEDB;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    
+    .review-date {
+      font-size: 14px;
+      color: #000;
+      margin-bottom: 5px;
+    }
+    
+    .review-ratings {
+      margin-top: 10px;
+      clear: both;
+      background: #2563EB;
+      width: 250px;
+    }
+    
+    .rating-category {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    
+    .category-name {
+      min-width: 80px;
+      font-size: 14px;
+      color: #000;
+    }
+    
+    .stars {
+      color: gold;
+      letter-spacing: 2px;
+    }
+    
+    .add-review-button {
+      display: block;
+      width: 250px;
+      margin: 30px auto 0;
+      padding: 12px 0;
+      background-color: #4169E1;
+      color: white;
+      text-align: center;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: 2px solid white;
+    }
+    .reviews-carousel{
+      display: flex;
+       gap: 20px; 
+      overflow-x: auto; 
+       padding: 20px 0;
+       justify-content: center;
+       align-items: center;
+    }
+    @media (max-width: 768px) {
+      .reviews-carousel {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .review-card {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .reviews-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .review-card {
+      max-width: 100%;
+    }
+  }
+
+  /* Additional CSS for Text Paragraph Section */
+
+.text-paragraph-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 0;
+  }
+  
+  .text-paragraph-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .text-paragraph-section h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .text-paragraph-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ffffff;
+    max-width: 100%;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .text-paragraph-section h2 {
+      font-size: 24px;
+    }
+    
+    .text-paragraph-section h3 {
+      font-size: 20px;
+    }
+    
+    .text-paragraph-section p {
+      font-size: 15px;
+    }
+  }
+
+  /* Additional CSS for FAQ Section */
+
+.faq-section {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 0;
+  }
+  
+  .faq-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  .faq-section p.text-center {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+  }
+  
+  .faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .faq-item {
+    margin-bottom: 2px;
+    overflow: hidden;
+  }
+  
+  .faq-question {
+    background-color: #2563eb; /* Blue background */
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .faq-icon {
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .faq-answer {
+    background-color: #000000; /* Black background */
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-answer.open {
+    padding: 20px;
+    max-height: 500px;
+  }
+  
+  .faq-answer p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Additional CSS for Category Section */
+
+.category-section {
+    background-color: #000000;
+    padding: 15px 0;
+  }
+  
+  .category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .category-button {
+    background-color: #2563eb; /* Blue background */
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    min-width: 180px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-button:hover {
+    background-color: #1d4ed8; /* Slightly darker blue on hover */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .category-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .category-button {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .escort-categories-section .container {
+    max-width: 1200px;
+  }
+  
+  .escort-categories-section a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .escort-categories-section .grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .escort-categories-section a {
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .container h2 {
+      font-size: 1.75rem;
+    }
+    
+    .lg\:col-span-7 h3 {
+      font-size: 1.5rem;
+    }
+    
+    .lg\:col-span-5 h3 {
+      font-size: 1.25rem;
+    }
+  }
+  
+/* footer */
+ /* Footer */
+ .footer {
+  background-color: var(--manila-dark);
+  border-top: 1px solid var(--gray-800);
+  padding: 3rem 0;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.logo-text {
+  color: var(--manila-gold);
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.logo-subtitle {
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.footer-link {
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: var(--manila-gold);
+}
+
+.copyright {
+  text-align: center;
+  color: var(--gray-400);
+  font-size: 0.875rem;
+}
+
+
+
+
+  /* Models Section */
+  .models-section {
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .escorts-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--manila-blue);
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  
+  .escort-tab {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: var(--white);
+  }
+  
+  .escort-tab.active {
+    background-color: var(--manila-blue);
+    color: var(--white);
+  }
+  
+  .models-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .models-layout {
+      flex-direction: row;
+    }
+  }
+  
+.view-more-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
