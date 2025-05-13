@@ -10,146 +10,312 @@
   <script src="main.js"></script>
 
   <style>
-      
-    .review-section-container {
-      width: 100%;
-      min-height: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 2rem;
-      background-color: #080B13;
-    }
-    
-    .review-carousel {
-      display: flex;
-      gap: 20px;
-      max-width: 1200px;
-      overflow-x: auto;
-      padding: 20px 0;
-      scrollbar-width: none; /* Firefox */
-    }
-    
-    .review-carousel::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, Opera */
-    }
-    
-    .review-item {
-      display: flex;
-      flex: 0 0 auto;
-      width: 350px;
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+}
+.heading h1{
+  font-size: 60px;
+  align-self: center;
+
+}
+.sub-heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+}
+
+.sub-heading h3{
+  font-size: 30px;
+}
+.escort-button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.Escort-buttons {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  background-color: #4169E1;
+  color: white;
+}
+
+/* review section */
+.reviews-container{
+  background: #4169E1;
+
+}
+.reviews-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+
+.review-card {
       background-color: white;
       border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      position: relative;
-    }
-    
-    .review-image-container {
-      width: 40%;
-      background-color: #4a0000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    
-    .review-image {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-    
-    .review-content {
-      width: 60%;
-      padding: 20px 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      background-color: #fffff0;
-    }
-    
-    .review-date {
-      color: #666;
-      font-size: 0.8rem;
-      margin-bottom: 5px;
-    }
-    
-    .review-category {
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      width: 250px;
-      font-size: 0.9rem;
-      line-height: 1;
-      color: #080B13;
-    }
-    
-    .stars {
-      color: #F97316;
-      font-size: 1rem;
-      letter-spacing: 2px;
-    }
-    
-    .review-text {
-      font-size: 0.9rem;
-      line-height: 1.4;
-      margin-top: 8px;
-      position: relative;
-      color: #080B13;
-    }
-    
-    .quote-mark {
-      color: #4169E1;
-      font-size: 1.5rem;
-      font-weight: bold;
-      position: absolute;
-      top: -10px;
-      left: -12px;
-    }
-    
-    .read-more {
-      color: #4169E1;
-      cursor: pointer;
-      font-size: 0.8rem;
+      width: 300px;
+      padding: 20px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     
     .reviewer-name {
-      background-color: #F97316;
-      color: white;
-      padding: 5px 15px;
-      border-radius: 25px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      align-self: flex-start;
+      color: #1EAEDB;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .review-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 5px;
+      object-fit: cover;
+      margin-right: 15px;
+      float: left;
+    }
+    
+    .review-text {
+      color: #333;
+      line-height: 1.4;
+      margin-bottom: 15px;
+      font-size: 14px;
+
+    }
+    
+    .read-more {
+      color: #1EAEDB;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    
+    .review-date {
+      font-size: 14px;
+      color: #000;
+      margin-bottom: 5px;
+    }
+    
+    .review-ratings {
       margin-top: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      clear: both;
+      background: #2563EB;
+      width: 250px;
     }
     
-    @media (max-width: 1200px) {
-      .review-carousel {
-        padding: 20px;
-      }
+    .rating-category {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
     }
     
+    .category-name {
+      min-width: 80px;
+      font-size: 14px;
+      color: #000;
+    }
+    
+    .stars {
+      color: gold;
+      letter-spacing: 2px;
+    }
+    
+    .add-review-button {
+      display: block;
+      width: 250px;
+      margin: 30px auto 0;
+      padding: 12px 0;
+      background-color: #4169E1;
+      color: white;
+      text-align: center;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: 2px solid white;
+    }
+    .reviews-carousel{
+      display: flex;
+       gap: 20px; 
+      overflow-x: auto; 
+       padding: 20px 0;
+       justify-content: center;
+       align-items: center;
+    }
     @media (max-width: 768px) {
-      .review-item {
-        width: 300px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .review-carousel {
+      .reviews-carousel {
         flex-direction: column;
         align-items: center;
       }
       
-      .review-item {
+      .review-card {
         width: 100%;
-        max-width: 350px;
+        max-width: 300px;
       }
     }
+
+
+  /* faq section
+    */
+    .FAQSection {
+  margin: 0 auto;
+  padding: 4rem;
+  max-width: 768px;
+
+}
+.FAQSection h2{
+  font-size: 50px;
+
+}
+.accordion .accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion button {
+  width: 100%;
+  background-color: #4169E1; 
+  color: white; 
+  border: none;
+  outline: none;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.accordion .icon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  border-radius: 50%;
+  position: relative;
+}
+
+.accordion .icon::before,
+.accordion .icon::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+}
+
+.accordion .icon::before {
+  top: 9px;
+  left: 4px;
+  width: 12px;
+  height: 2px;
+}
+
+.accordion .icon::after {
+  top: 4px;
+  left: 9px;
+  width: 2px;
+  height: 12px;
+}
+
+.accordion button[aria-expanded="true"] .icon::after {
+  display: none;
+}
+
+.accordion .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.accordion button[aria-expanded="true"] + .accordion-content {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.accordion .accordion-content p {
+  padding: 1rem 0;
+  color: #fff;
+}
+/* Models Section */
+.models-section {
+    padding: 2.5rem 0;
+  }
+  
+  .escorts-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--manila-blue);
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  
+  .escort-tab {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    color: var(--white);
+  }
+  
+  .escort-tab.active {
+    background-color: var(--manila-blue);
+    color: var(--white);
+  }
+  
+  .models-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 1024px) {
+    .models-layout {
+      flex-direction: row;
+    }
+  }
+  
+  /* Tab toggle control */
+.models-container {
+  display: none;
+}
+
+.models-container.active {
+  display: block;
+}
+
+/* Grid layout control */
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+@media (min-width: 640px) {
+  .models-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .models-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -159,7 +325,7 @@
     <div class="container">
       <div class="navbar">
         <div class="logo">
-         <a href="index.html"> <img src="./assets/images/logo 1.png"></a>
+         <a href="index.html"> <img src="./assets/images/logo.jpeg" style="height: 80px;"></a>
         </div>
         
         <nav>
@@ -170,7 +336,7 @@
 
             </li>
             <li class="dropdown">
-              <a href="#" class="nav-link  dropdown-arrow">Services</a>
+              <a href="services.html" class="nav-link  dropdown-arrow">Services</a>
 
             </li>
             <li class="dropdown">
@@ -179,7 +345,7 @@
             </li>
             <li><a href="#" class="nav-link">Rates</a></li>
             <li><a href="casting.html" class="nav-link">Casting</a></li>
-            <li><a href="#" class="nav-link">Booking</a></li>
+            <li><a href="booking.html" class="nav-link">Booking</a></li>
             <li><a href="#" class="nav-link">Contact</a></li>
           </ul>
         </nav>
@@ -237,6 +403,8 @@
 <!-- Models Section -->
 <section class="models-section">
   <div class="container">
+  <div class="heading"><h1>Our Model</h1></div>
+  <div class="sub-heading"><h3>100% Real and Recent Pictures Guaranteed or pay NO rejection fee</h3></div>
     <div class="models-grid">
       <!-- Model 1 -->
       <div class="model-card">
@@ -323,26 +491,7 @@
   </div>
 </section>
 
-<!-- London Escorts Section -->
-<section class="london-escorts">
-  <div class="container">
-    <h2>69 Escorts in London</h2>
-    <p>Experience extraordinary pleasure in mutual pleasure with our 69 escorts in London. At Top Secret Escorts, we offer a select group of skilled companions who excel in this intimate and reciprocal act. Our gallery features a diverse array of stunning escorts, each ready to provide unforgettable 69 experiences with charm and enthusiasm.</p>
-    
-    <p>Discover the allure of our 69 escorts in London by exploring our carefully curated selection below!</p>
-    
-    <h3>The Appeal of 69 Escorts</h3>
-    <p>There's a special allure in this art of simultaneous oral pleasure. They offer a uniquely intimate experience that's especially perfect for those who enjoy giving as much as receiving. This service requires a special level of chemistry and skill, which our escorts possess in abundance.</p>
-    
-    <h3>Elevate Your Sexual Experience</h3>
-    <p>Whether you're new to the 69 position or a seasoned enthusiast, our skilled escorts can provide a memorable and satisfying encounter. They understand the intricacies of this service, ensuring a delightful experience that will leave you wanting more.</p>
-    
-    <h3>Book Your 69 Escort Experience</h3>
-    <p>Arranging a date with one of our 69 escorts is discreet and straightforward. Contact us via WhatsApp, Telegram, or call us directly at +44 079 0007 2935. Our professional team will assist you in making a reservation for an unforgettable 69 experience.</p>
-  </div>
-</section>
-
-<!-- International Service Section -->
+  <!-- International Service Section -->
 <section class="international-service">
   <div class="container">
     <h2 class="service-title">International Travel Escort Service</h2>
@@ -428,94 +577,143 @@
   </div>
 </section>
 
+<!-- London Escorts Section -->
+<section class="london-escorts">
+  <div class="container">
+    <h2>69 Escorts in London</h2>
+    <p>Experience extraordinary pleasure in mutual pleasure with our 69 escorts in London. At Top Secret Escorts, we offer a select group of skilled companions who excel in this intimate and reciprocal act. Our gallery features a diverse array of stunning escorts, each ready to provide unforgettable 69 experiences with charm and enthusiasm.</p>
+    
+    <p>Discover the allure of our 69 escorts in London by exploring our carefully curated selection below!</p>
+    
+    <h3>The Appeal of 69 Escorts</h3>
+    <p>There's a special allure in this art of simultaneous oral pleasure. They offer a uniquely intimate experience that's especially perfect for those who enjoy giving as much as receiving. This service requires a special level of chemistry and skill, which our escorts possess in abundance.</p>
+    
+    <h3>Elevate Your Sexual Experience</h3>
+    <p>Whether you're new to the 69 position or a seasoned enthusiast, our skilled escorts can provide a memorable and satisfying encounter. They understand the intricacies of this service, ensuring a delightful experience that will leave you wanting more.</p>
+    
+    <h3>Book Your 69 Escort Experience</h3>
+    <p>Arranging a date with one of our 69 escorts is discreet and straightforward. Contact us via WhatsApp, Telegram, or call us directly at +44 079 0007 2935. Our professional team will assist you in making a reservation for an unforgettable 69 experience.</p>
+  </div>
+</section>
+
+
+
 <!-- Reviews Section -->
-<section class="reviews-section">
-  <div class="review-section-container">
-    <div class="review-carousel">
-      <div class="review-item">
-        <div class="review-image-container">
-          <img 
-            src="/assets/images/image 2.jpg" 
-            alt="Reviewer" 
-            class="review-image" 
-          />
-        </div>
-        <div class="review-content">
-          <div class="review-date">November '24</div>
-          <div class="review-category">
-            <span>Looks: </span>
-            <span class="stars">★ ★ ★ ★ ☆</span>
-          </div>
-          <div class="review-category">
-            <span>Performance: </span>
-            <span class="stars">★ ★ ★ ★ ☆</span>
-          </div>
-          <div class="review-text">
-            <span class="quote-mark">"</span>
-            Lorem ipsum dolor sit amet consectetur. Faucibus augue amet ut tellus. Sem varius sollicitudin tellus ipsum. Non volutpat eu elit suspendisse sed tristique. Commodo vulputate non morbi pharetra
-            <span class="read-more"> Read more...</span>
-          </div>
-          <div class="reviewer-name">Debrah</div>
-        </div>
+<div class="reviews-container">
+  <h1 class="reviews-title">Latest Reviews</h1>
+  
+  <div class="reviews-carousel">
+    <div class="review-card">
+      <div class="reviewer-name">Frenie</div>
+      <img src="/assets/images/Layer 9 copy.jpg" alt="Reviewer" class="review-image">
+      <div class="review-text">
+        "Frenie is super hot, even better in person! I booked her for a hour and a half and it was a exceptional experience, even tho she is young she is very e...
+        <a href="#" class="read-more">read more »"</a>
       </div>
-
-      <div class="review-item">
-        <div class="review-image-container">
-          <img 
-            src="/assets/images/image 2.jpg" 
-            alt="Reviewer" 
-            class="review-image" 
-          />
+      
+      <div class="review-ratings">
+      <div class="review-date">November 24</div>
+        <div class="rating-category">
+          <span class="category-name">Looks:</span>
+          <span class="stars">★★★★★</span>
         </div>
-        <div class="review-content">
-          <div class="review-date">November '24</div>
-          <div class="review-category">
-            <span>Looks: </span>
-            <span class="stars">★ ★ ★ ★ ☆</span>
-          </div>
-          <div class="review-category">
-            <span>Performance: </span>
-            <span class="stars">★ ★ ★ ★ ☆</span>
-          </div>
-          <div class="review-text">
-            <span class="quote-mark">"</span>
-            Lorem ipsum dolor sit amet consectetur. Faucibus augue amet ut tellus. Sem varius sollicitudin tellus ipsum. Non volutpat eu elit suspendisse sed tristique. Commodo vulputate non morbi pharetra
-            <span class="read-more"> Read more...</span>
-          </div>
-          <div class="reviewer-name">Debrah</div>
-        </div>
-      </div>
-
-      <div class="review-item">
-        <div class="review-image-container">
-          <img 
-            src="/assets/images/image 2.jpg" 
-            alt="Reviewer" 
-            class="review-image" 
-          />
-        </div>
-        <div class="review-content">
-          <div class="review-date">November '24</div>
-          <div class="review-category">
-            <span>Looks: </span>
-            <span class="stars">★ ★ ★ ★ ☆</span>
-          </div>
-          <div class="review-category">
-            <span>Performance: </span>
-            <span class="stars">★ ★ ★ ★ ☆</span>
-          </div>
-          <div class="review-text">
-            <span class="quote-mark">"</span>
-            Lorem ipsum dolor sit amet consectetur. Faucibus augue amet ut tellus. Sem varius sollicitudin tellus ipsum. Non volutpat eu elit suspendisse sed tristique. Commodo vulputate non morbi pharetra
-            <span class="read-more"> Read more...</span>
-          </div>
-          <div class="reviewer-name">Debrah</div>
+        <div class="rating-category">
+          <span class="category-name">Performance:</span>
+          <span class="stars">★★★★★</span>
         </div>
       </div>
     </div>
-  </div>  
+    
+    <div class="review-card">
+      <div class="reviewer-name">Frenie</div>
+      <img src="/assets/images/Layer 9 copy.jpg" alt="Reviewer" class="review-image">
+      <div class="review-text">
+        "Frenie is super hot, even better in person! I booked her for a hour and a half and it was a exceptional experience, even tho she is young she is very e...
+        <a href="#" class="read-more">read more »"</a>
+      </div>
+      
+      <div class="review-ratings">
+      <div class="review-date">November 24</div>
+        <div class="rating-category">
+          <span class="category-name">Looks:</span>
+          <span class="stars">★★★★★</span>
+        </div>
+        <div class="rating-category">
+          <span class="category-name">Performance:</span>
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="review-card">
+      <div class="reviewer-name">Frenie</div>
+      <img src="/assets/images/Layer 9 copy.jpg" alt="Reviewer" class="review-image">
+      <div class="review-text">
+        "Frenie is super hot, even better in person! I booked her for a hour and a half and it was a exceptional experience, even tho she is young she is very e...
+        <a href="#" class="read-more">read more »"</a>
+      </div>
+      
+      <div class="review-ratings">
+      <div class="review-date">November 24</div>
+        <div class="rating-category">
+          <span class="category-name">Looks:</span>
+          <span class="stars">★★★★★</span>
+        </div>
+        <div class="rating-category">
+          <span class="category-name">Performance:</span>
+          <span class="stars">★★★★★</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
+
+<a href="#" class="add-review-button">Click Here to add a Review »</a>
+
+<!-- FAQ Section -->
+
+<section class="FAQSection">
+  <h2>FAQs about Mynt Models</h2>
+  <p>We provide answers to common questions that potential clients may have about their high-class escort services with us.</p>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button aria-expanded="false">
+        <span class="accordion-title">Why is the moon out during the day?</span>
+        <span class="icon"></span>
+      </button>
+      <div class="accordion-content">
+        <p>Because of its orbit and the position of the sun, the moon can often be visible in daylight!</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button aria-expanded="false">
+        <span class="accordion-title">Why is the sky blue?</span>
+        <span class="icon"></span>
+      </button>
+      <div class="accordion-content">
+        <p>The sky appears blue due to Rayleigh scattering of sunlight by the atmosphere.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button aria-expanded="false">
+        <span class="accordion-title">Why is the sky blue?</span>
+        <span class="icon"></span>
+      </button>
+      <div class="accordion-content">
+        <p>The sky appears blue due to Rayleigh scattering of sunlight by the atmosphere.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
+
+
+<!-- Escort buttons -->
+    
+<escort-grid></escort-grid>
 
 <!-- Galleries Section -->
 <section class="galleries-section">
@@ -614,5 +812,40 @@
       });
     });
   </script>
+
+<script src="escort-grid.js"></script>
+
+
+
+<!-- Place THIS here -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const items = document.querySelectorAll('.accordion button');
+
+    function toggleAccordion() {
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      items.forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
+      if (!isExpanded) {
+        this.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    items.forEach((item) => item.addEventListener('click', toggleAccordion));
+  });
+</script>
+
+<script>
+  function showModels(type) {
+    // Hide all
+    document.querySelectorAll('.models-container').forEach(grid => grid.classList.remove('active'));
+    document.querySelectorAll('.escort-tab').forEach(tab => tab.classList.remove('active'));
+
+    // Show selected
+    document.getElementById(type).classList.add('active');
+    document.querySelector(`button[onclick="showModels('${type}')"]`).classList.add('active');
+  }
+</script>
+
 </body>
 </html>
+
