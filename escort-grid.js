@@ -18,17 +18,30 @@ class EscortGrid extends HTMLElement {
     border: 1px solid var(--manila-blue);
     border-radius: 0.25rem;
     overflow: hidden;
+    gap:1rem;
+    background: none;
   }
+
+
   
-  .escort-tab {
-    padding: 0.5rem 1rem;
-    background-color: #4169E1;
-    color: #fff;
-  }
+.escort-tab {
+  width: 160px; 
+  padding: 12px 0;
+  background-color: white;
+  color: #274EC3;
+  border: none;
+  border-top-left-radius: 31.5px;
+  border-top-right-radius: 31.5px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
   
   .escort-tab.active {
-    background-color: var(--manila-blue);
-    color: var(--white);
+    background-color:  #274EC3;
+    color: #fff;
   }
 
 .escort-image {
@@ -80,6 +93,7 @@ class EscortGrid extends HTMLElement {
 }
 
         </style>
+        <br>
         <div class="escorts-tabs">
           <button class="escort-tab active" data-type="female">Female Escort</button>
           <button class="escort-tab" data-type="male">Male Escort</button>

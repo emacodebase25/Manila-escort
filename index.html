@@ -314,6 +314,9 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.faq{
+  height: max-content;
+}
 
 
   </style>
@@ -358,14 +361,15 @@
   </header>
  
   <!-- Hero Section -->
-  <section class="relative h-[550px] bg-center bg-cover" style="background-image: url('./assets/images/hero-img.jpg');">
-      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
-    <div class="container mx-auto px-4 h-full flex flex-col justify-center relative z-10">
-        <h1 class="text-5xl md:text-6xl font-bold mb-4">Metro Manila's #1<br>model Service.</h1>
-        <p class="text-4xl mb-6">We Are Open 24/7</p>
-        <p class="text-xl mb-8 max-w-lg">Drama and Scam free environment!<br>Browse and enjoy the best model agency in the Philippines!</p>
-      </div>
-  </section>
+          <!-- Hero Section -->
+          <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+              <h1 class="text-5xl md:text-6xl font-bold mb-4">Metro Manila's #1<br>model Service.</h1>
+              <p class="text-4xl mb-6">We Are Open 24/7</p>
+              <p class="text-xl mb-8 max-w-lg">Drama and Scam free environment!<br>Browse and enjoy the best model agency in the Philippines!</p>
+            </div>
+          </section>
   
   <!-- Navigation Options -->
 
@@ -405,85 +409,9 @@
   <div class="container">
   <div class="heading"><h1>Our Model</h1></div>
   <div class="sub-heading"><h3>100% Real and Recent Pictures Guaranteed or pay NO rejection fee</h3></div>
-    <div class="models-grid">
-      <!-- Model 1 -->
-      <div class="model-card">
-        <a href="model.html">
-        <img src="/assets/images/model-location 1.png" class="model-image" alt="Genesis">
-        <div class="model-info">
-          <div>
-            <div class="model-name">Genesis</div>
-            <div class="model-age">26 y.o</div>
-          </div>
-          <div class="model-price">$ 250/300</div>
-        </div></a>
-      </div>
-
-      <!-- Model 2 -->
-      <div class="model-card">
-        <a href="model.html">
-        <img src="/assets/images/image.jpg" class="model-image" alt="Genesis">
-        <div class="model-info">
-          <div>
-            <div class="model-name">Genesis</div>
-            <div class="model-age">25 y.o</div>
-          </div>
-          <div class="model-price">$ 250/300</div>
-        </div></a>
-      </div>
-
-      <!-- Model 3 -->
-      <div class="model-card">
-        <a href="model.html">
-        <img src="/assets/images/image (1).jpg" class="model-image" alt="Genesis">
-        <div class="model-info">
-          <div>
-            <div class="model-name">Genesis</div>
-            <div class="model-age">28 y.o</div>
-          </div>
-          <div class="model-price">$ 250/300</div>
-        </div></a>
-      </div>
-
-      <!-- Model 4 -->
-      <div class="model-card">
-        <a href="model.html">
-        <img src="/assets/images/image (2).jpg" class="model-image" alt="Genesis">
-        <div class="model-info">
-          <div>
-            <div class="model-name">Genesis</div>
-            <div class="model-age">24 y.o</div>
-          </div>
-          <div class="model-price">$ 250/300</div>
-        </div></a>
-      </div>
-
-      <!-- Model 5 -->
-      <div class="model-card">
-        <a href="model.html">
-        <img src="/assets/images/image (3).jpg" class="model-image" alt="Genesis">
-        <div class="model-info">
-          <div>
-            <div class="model-name">Genesis</div>
-            <div class="model-age">27 y.o</div>
-          </div>
-          <div class="model-price">$ 250/300</div>
-        </div></a>
-      </div>
-
-      <!-- Model 6 -->
-      <div class="model-card">
-        <a href="model.html">
-        <img src="/assets/images/image (4).jpg" class="model-image" alt="Genesis">
-        <div class="model-info">
-          <div>
-            <div class="model-name">Genesis</div>
-            <div class="model-age">29 y.o</div>
-          </div>
-          <div class="model-price">$ 250/300</div>
-        </div></a>
-      </div>
-    </div>
+<!-- Escort buttons -->
+    
+<escort-grid></escort-grid>
 
     <div class="view-more">
       <button class="view-more-btn">View More</button>
@@ -599,7 +527,7 @@
 
 
 <!-- Reviews Section -->
-<div class="reviews-container">
+<div class="reviews-container" style="height: 450px;">
   <h1 class="reviews-title">Latest Reviews</h1>
   
   <div class="reviews-carousel">
@@ -670,50 +598,55 @@
 
 
 <a href="#" class="add-review-button">Click Here to add a Review »</a>
+<br>
+<div class="faq">
 
-<!-- FAQ Section -->
-
-<section class="FAQSection">
-  <h2>FAQs about Mynt Models</h2>
-  <p>We provide answers to common questions that potential clients may have about their high-class escort services with us.</p>
-  <div class="accordion">
-    <div class="accordion-item">
-      <button aria-expanded="false">
-        <span class="accordion-title">Why is the moon out during the day?</span>
-        <span class="icon"></span>
-      </button>
-      <div class="accordion-content">
-        <p>Because of its orbit and the position of the sun, the moon can often be visible in daylight!</p>
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container mx-auto px-4 py-10">
+      <h2 class="text-center text-4xl font-bold mb-6">FAQs about Manila Models</h2>
+      
+      <p class="text-center mb-10">
+        We provide answers to common questions that potential clients may have about their high-class travel services with us.
+      </p>
+      
+      <div class="faq-container">
+        <!-- FAQ Item 1 (Open) -->
+        <div class="faq-item">
+          <div class="faq-question active">
+            <span class="faq-icon">-</span> What does Manila Models provide?
+          </div>
+          <div class="faq-answer open">
+            <p>We specialize in discreet, naturally beautiful and friendly companions who offer an exceptional luxury travel experience. With a first-class approach, nothing is superficial or robotic. Selective clients can meet a beautiful businesswoman, gorgeous model or professional guide, VIP celebrity or actress companion, or an adorable high-class travel companion, in a real-date environment. In our relentless drive for excellence, our standards are high.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 2 (Closed) -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-icon">+</span> How is Manila Models VIP travel agency different from other international travel agencies?
+          </div>
+          <div class="faq-answer">
+            <p>Unlike standard agencies, we personally interview and select each guide to ensure they meet our strict standards for beauty, intelligence, and personality. We focus on quality over quantity, maintaining a select roster of exceptional companions who are not only visually stunning but also engaging conversationalists and culturally knowledgeable. Our service is truly global, with connections in major cities worldwide, and we offer unparalleled discretion and personalization for each client's needs.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 3 (Closed) -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-icon">+</span> What kind of people love Manila Models?
+          </div>
+          <div class="faq-answer">
+            <p>Our clients are typically successful, discerning individuals who value quality experiences and meaningful connections. They include business executives seeking companions for corporate events, international travelers wanting knowledgeable local guides, and sophisticated individuals looking for engaging company at social functions. Our clients appreciate beauty, intelligence, and discretion—they're looking for more than just a tour guide; they want an authentic connection with someone who enhances their experience in Manila.</p>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="accordion-item">
-      <button aria-expanded="false">
-        <span class="accordion-title">Why is the sky blue?</span>
-        <span class="icon"></span>
-      </button>
-      <div class="accordion-content">
-        <p>The sky appears blue due to Rayleigh scattering of sunlight by the atmosphere.</p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button aria-expanded="false">
-        <span class="accordion-title">Why is the sky blue?</span>
-        <span class="icon"></span>
-      </button>
-      <div class="accordion-content">
-        <p>The sky appears blue due to Rayleigh scattering of sunlight by the atmosphere.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
-<!-- Escort buttons -->
-    
-<escort-grid></escort-grid>
+</div>
 
 <!-- Galleries Section -->
 <section class="galleries-section">
@@ -818,21 +751,7 @@
 
 
 <!-- Place THIS here -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const items = document.querySelectorAll('.accordion button');
 
-    function toggleAccordion() {
-      const isExpanded = this.getAttribute('aria-expanded') === 'true';
-      items.forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
-      if (!isExpanded) {
-        this.setAttribute('aria-expanded', 'true');
-      }
-    }
-
-    items.forEach((item) => item.addEventListener('click', toggleAccordion));
-  });
-</script>
 
 <script>
   function showModels(type) {
