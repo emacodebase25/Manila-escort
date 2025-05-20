@@ -6,123 +6,16 @@
   <title>Manila Luxury model - Premium Tour Services</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="/index.css">
-  <link rel="stylesheet" href="/booking.css">
-  <script src="main.js"></script>
-  <style>
-    
-  /* Additional CSS for FAQ Section */
-
-.faq-section {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 40px 0;
-  }
-  
-  .faq-section h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #ffffff;
-    text-align: center;
-  }
-  
-  .faq-section p.text-center {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    font-size: 16px;
-  }
-  
-  .faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .faq-item {
-    margin-bottom: 2px;
-    overflow: hidden;
-  }
-  
-  .faq-question {
-    background-color: #2563eb; /* Blue background */
-    padding: 15px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .faq-icon {
-    margin-right: 15px;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  .faq-answer {
-    background-color: #000000; /* Black background */
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .faq-answer.open {
-    padding: 20px;
-    max-height: 500px;
-  }
-  
-  .faq-answer p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  </style>
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/booking.css">
+<script src="./assets/script/main.js"></script>
   </head>
 
   <body>
-      <!-- Header & Navigation -->
- 
-      <header class="header">
-        <div class="container">
-          <div class="navbar">
-            <div class="logo">
-             <a href="index.html"> <img src="./assets/images/logo.jpeg" style="height: 80px;"></a>
-            </div>
-            
-            <nav>
-              <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li class="dropdown">
-                  <a href="#" class="nav-link dropdown-arrow">Gallery</a>
+
+    <!-- Header and Navigation -->
+<div id="header-placeholder"></div>
     
-                </li>
-                <li class="dropdown">
-                  <a href="services.html" class="nav-link  dropdown-arrow">Services</a>
-    
-                </li>
-                <li class="dropdown">
-                  <a href="location.html" class="nav-link dropdown-arrow">Location</a>
-    
-                </li>
-                <li><a href="#" class="nav-link">Rates</a></li>
-                <li><a href="casting.html" class="nav-link">Casting</a></li>
-                <li><a href="booking.html" class="nav-link  active">Booking</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
-              </ul>
-            </nav>
-            
-            <div class="vip-section">
-              <a href="#" class="vip-button">VIP ESCORTS</a>
-            </div>
-          </div>
-        </div>
-      </header>
-    
-  <!-- Hero Section -->
           <!-- Hero Section -->
           <section class="hero-section">
             <div class="hero-overlay"></div>
@@ -137,138 +30,100 @@
   <main>
  
     <!-- form section  -->
-    <section>
-        <form action="">
-            <!--  General -->
-            <div class="form-group">
-              <h2 class="heading">Hi there, hope you've been enjoying our website!</h2><p>
-
-                If you want to book any of our London escorts by email, please fill the form below and we will be contacting you as soon as possible. Please note that for same day/short notice bookings it is advised to contact us by phone, as online bookings could take up to 24 hours to process.</p>
-                <p><br>
-                
-               <span style="color: #E3FF0F;"> Online bookings could take up to 24 hours to process</span><br>
-                Many thanks,.</p><br><br>
-
-                <h2 style="font-family: Taprom; font-size: 40px;">Miss Peachy x</h2>
-              <div class="controls">
-                <div>
-                    <!-- <label for="escort-name">Escort Name</label> -->
-                    <select id="escort-name" name="name" class="floatLabel" placeholder="Escort Name" style="color: #fff;">
-                      <option value="" style="color: #274EC3;">-- Select Escort --</option>
-                      <option value="gloria" style="color: #274EC3;">Gloria</option>
-                      <option value="jessica" style="color: #274EC3;">Jessica</option>
-                      <option value="samantha" style="color: #274EC3;">Samantha</option>
-                      <option value="michelle" style="color: #274EC3;">Michelle</option>
-                      <option value="lisa" style="color: #274EC3;">Lisa</option>
-                    </select>
-                  </div>
-              </div>
-              <div class="controls">
-                <input type="text" id="name" class="floatLabel" name="name" placeholder="Customer Name" style="color: #fff;">
-                <!-- <label for="name">Customer Name</label> -->
-              </div>       
-              <div class="controls">
-                <input type="tel" id="phone" class="floatLabel" name="phone" placeholder="Customer Number" style="color: #fff;">
-                <!-- <label for="phone">Customer Number</label> -->
-              </div>
-              <div class="controls">
-                <input type="text" id="email" class="floatLabel" name="email" placeholder="E-mail" style="color: #fff;">
-                <!-- <label for="email">E-mail</label> -->
-              </div>       
-              <div class="controls">
-                <input type="date" id="phone" class="floatLabel" name="date" placeholder="mm/dd/yyyy" style="color: #fff;">
-                <!-- <label for="phone"></label> -->
-              </div>
-              <div class="controls">
-                 
-                <input type="time" id="eventTime" name="eventTime" class="floatLabel"  placeholder="hh:mm" style="color: #fff;">
-                <!-- <label for="phone"></label> -->
-              </div>
-              <div class="controls">
-                <div>
-                    <!-- <label for="escort-name">Visit Type</label> -->
-                    <select id="escort-name" name="name" class="floatLabel" placeholder="Visit Type" style="color: #fff;">
-                      <option value="" style="color: #274EC3;">-- Select Visit Type --</option>
-                      <option value="gloria" style="color: #274EC3;">Deep French Kissing</option>
-                      <option value="jessica" style="color: #274EC3;">Hand Job</option>
-                      <option value="samantha" style="color: #274EC3;">Strip Tease</option>
-                      <option value="michelle" style="color: #274EC3;">Deep Throat</option>
-                      <option value="lisa" style="color: #274EC3;">Submissive</option>
-                    </select>
-                  </div>
-              </div>
-              <div class="controls">
-                <div>
-                    <!-- <label for="durationMinutes">Duration (in minutes):</label> -->
-                    <input type="number" id="durationMinutes" name="durationMinutes" min="0" placeholder="Duration(in Minute)" style="color: #fff;">
-                  </div>    
-              </div>
-              <div class="controls">
-                <input type="text" id="name" class="floatLabel" name="name" placeholder="Special Request" style="color: #fff;">
-                <!-- <label for="name">Special Request</label> -->
-              </div>
-
-
-              <button type="submit" style="   display: block;
-              background-color: #274EC3;
-              color: #fff;
-              padding: 8px 15px;
-              border-radius: 4px;
-              text-align: center;
-              width: max-content;
-              margin-top: 15px;
-              font-weight: bold;">Submit Booking</button>
-
-
-            </div>
-         <!-- /.form-group -->
-          </form>
-    </section>
-
-
-
-  <!-- FAQ Section -->
-  <section class="faq-section">
-    <div class="container mx-auto px-4 py-10">
-      <h2 class="text-center text-4xl font-bold mb-6">FAQs about Manila Models</h2>
-      
-      <p class="text-center mb-10">
-        We provide answers to common questions that potential clients may have about their high-class travel services with us.
-      </p>
-      
-      <div class="faq-container">
-        <!-- FAQ Item 1 (Open) -->
-        <div class="faq-item">
-          <div class="faq-question active">
-            <span class="faq-icon">-</span> What does Manila Models provide?
-          </div>
-          <div class="faq-answer open">
-            <p>We specialize in discreet, naturally beautiful and friendly companions who offer an exceptional luxury travel experience. With a first-class approach, nothing is superficial or robotic. Selective clients can meet a beautiful businesswoman, gorgeous model or professional guide, VIP celebrity or actress companion, or an adorable high-class travel companion, in a real-date environment. In our relentless drive for excellence, our standards are high.</p>
-          </div>
+<div class="booking-section">
+        <hr>
+        <div style="padding: 0 70px;">
+            <p>Hi there, hope you've been enjoying our website!</p>
+            <p>If you want to book any of our London escorts by email, please fill the form below and we will be contacting you as soon as possible. Please note that for same day/short notice bookings it is advised to contact us by phone, as online bookings could take up to 24 hours to process.</p>
+            <p style="color: #E3FF0F;">Online bookings could take up to 24 hours to process</p><p>Many thanks..</p>
+            <span class="signature">Miss Peachy x</span>
         </div>
         
-        <!-- FAQ Item 2 (Closed) -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span class="faq-icon">+</span> How is Manila Models VIP travel agency different from other international travel agencies?
-          </div>
-          <div class="faq-answer">
-            <p>Unlike standard agencies, we personally interview and select each guide to ensure they meet our strict standards for beauty, intelligence, and personality. We focus on quality over quantity, maintaining a select roster of exceptional companions who are not only visually stunning but also engaging conversationalists and culturally knowledgeable. Our service is truly global, with connections in major cities worldwide, and we offer unparalleled discretion and personalization for each client's needs.</p>
-          </div>
+        <div class="booking-form">
+            <select class="form-control">
+                <option disabled selected>Escort Name</option>
+            </select>
+            
+            <input type="text" class="form-control" placeholder="Customer Name">
+            <input type="tel" class="form-control" placeholder="Contact Number">
+            <input type="email" class="form-control" placeholder="Email Address">
+            <input type="date" class="form-control" placeholder="mm/dd/yyyy">
+            <input type="time" class="form-control" placeholder="hh:mm">
+            
+            <select class="form-control">
+                <option disabled selected>Visit Type</option>
+            </select>
+            
+            <input type="text" class="form-control" placeholder="Duration (in minutes)">
+            <input type="text" class="form-control" placeholder="Special Requests...">
         </div>
-        
-        <!-- FAQ Item 3 (Closed) -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span class="faq-icon">+</span> What kind of people love Manila Models?
-          </div>
-          <div class="faq-answer">
-            <p>Our clients are typically successful, discerning individuals who value quality experiences and meaningful connections. They include business executives seeking companions for corporate events, international travelers wanting knowledgeable local guides, and sophisticated individuals looking for engaging company at social functions. Our clients appreciate beauty, intelligence, and discretion—they're looking for more than just a tour guide; they want an authentic connection with someone who enhances their experience in Manila.</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+    
+    <div class="submission-row">
+        <button class="btn-submit">Submit Booking</button>
+        <div class="recaptcha">
+            
+                       <div class="recaptcha-box" style="margin-right: 40px; margin-bottom: 40px;">reCAPTCHA</div>
+        </div>
+    </div>
+
+
+
+
+        <!-- FAQ Section -->
+    
+    <div class="faq-section">
+        <h2 style="font-size: 40px;">FAQs about Mynt Models</h2>
+        <p>We provide answers to common questions that potential clients may have about their high-class escort services with us</p>
+        
+        <div class="accordion">
+            <div class="accordion-header">What does Mynt Models provide?</div>
+            <div class="accordion-content">
+                We specialize in discrete, beautiful beautiful and friendly companions who offer an exceptional luxury experience. With a first-class approach, nothing is superfluous or rushed. Selected for their personality, natural beauty, model or supermodel-esque VIP presence or actress level high-class travel companions, it's an upscale environment. In our relentless drive for excellence, our standards are high.
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">How is Mynt Models VIP escort agency different from other international escort agencies?</div>
+            <div class="accordion-content">
+                Content would appear here when expanded.
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">What kind of people love Mynt Models?</div>
+            <div class="accordion-content">
+                Content would appear here when expanded.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    // Hide all accordion contents
+                    document.querySelectorAll('.accordion-content').forEach(item => {
+                        item.style.display = 'none';
+                    });
+                    // Show the clicked one
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+    
+
+
 
 </main>
 
@@ -299,21 +154,10 @@
       </footer>
 
 
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const items = document.querySelectorAll('.accordion button');
-      
-          function toggleAccordion() {
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            items.forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
-            if (!isExpanded) {
-              this.setAttribute('aria-expanded', 'true');
-            }
-          }
-      
-          items.forEach((item) => item.addEventListener('click', toggleAccordion));
-        });
-      </script>
+      <script src="./assets/script/include-header.js"></script>
+
+
+
 
 
   </body>

@@ -8,9 +8,8 @@
     <meta name="description" content="Metro Manila's #1 escort service" />
     <meta name="author" content="Manila Asian Escorts" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="location.css">
-    <link rel="stylesheet" href="index.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="./assets/css/location.css">
+<script src="./assets/script/main.js"></script>
 
 
     <style>
@@ -160,42 +159,9 @@
 
   <body>
     <div class="app">
-      <header class="header">
-        <div class="container">
-          <div class="navbar">
-            <div class="logo">
-             <a href="index.html"> <img src="./assets/images/logo.jpeg" style="height: 80px;"></a>
-            </div>
-            
-            <nav>
-              <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li class="dropdown">
-                  <a href="#" class="nav-link dropdown-arrow">Gallery</a>
-    
-                </li>
-                <li class="dropdown">
-                  <a href="services.html" class="nav-link  dropdown-arrow">Services</a>
-    
-                </li>
-                <li class="dropdown">
-                  <a href="location.html" class="nav-link dropdown-arrow  active">Location</a>
-    
-                </li>
-                <li><a href="#" class="nav-link">Rates</a></li>
-                <li><a href="casting.html" class="nav-link">Casting</a></li>
-                <li><a href="booking.html" class="nav-link">Booking</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
-              </ul>
-            </nav>
-            
-            <div class="vip-section">
-              <a href="#" class="vip-button">VIP ESCORTS</a>
-            </div>
-          </div>
-        </div>
-      </header>
-        
+  <!-- Header & Navigation -->
+ 
+<div id="header-placeholder"></div>
          
           <!-- Hero Section -->
           <section class="hero-section">
@@ -247,6 +213,7 @@
           
          <escort-grid></escort-grid>
       </div>
+      </div>
 
       <div class="locations-panel" >
         <h3 class="locations-title">Locations</h3>
@@ -288,92 +255,141 @@
     </section>
 
     <section >
-      <!-- Reviews Section -->
 
-      <div class="review-section-container">
-        <div class="review-carousel">
-          <div class="review-item">
-            <div class="review-image-container">
-              <img 
-                src="/assets/images/front-view-woman-bdsm-aesthetics_23-2151117244 1.jpg" 
-                alt="Reviewer" 
-                class="review-image" 
-              />
+      <!-- Reviews Section -->
+      <section class="escort-reviews-wrapper">
+        <div class="review-section-inner">
+          <h2 class="review-main-heading">Customer Reviews</h2>
+          
+          <div class="reviews-slider">
+            <!-- Review Card 1 -->
+            <div class="review-item-card">
+              <div class="review-date-label">November '24</div>
+              
+              <div class="review-rating-row">
+                <span class="rating-category-label">Looks:</span>
+                <div class="star-rating">
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon half-filled"></i>
+                </div>
+              </div>
+              
+              <div class="review-rating-row">
+                <span class="rating-category-label">Performance:</span>
+                <div class="star-rating">
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon half-filled"></i>
+                </div>
+              </div>
+              
+              <div class="review-content-box">
+                <img src="./assets/images/image (2).jpg" alt="Sofia" class="escort-review-image">
+                <p class="review-text">
+                  "Sofia is absolutely stunning, even better in person! I booked her for two hours and it was an exceptional experience. Even though she is young, she is very experienced and attentive to what you want. Would definitely see her again when I'm back in Manila."
+                  <a href="#" class="read-more-link">Read more...</a>
+                </p>
+              </div>
+              
+              <a href="#" class="escort-profile-link">
+                <span class="escort-name">Sofia</span>
+              </a>
             </div>
-            <div class="review-content">
-              <div class="review-date">November '24</div>
-              <div class="review-category">
-                <span>Looks: </span>
-                <span class="stars">★ ★ ★ ★ ☆</span>
+            
+            <!-- Review Card 2 -->
+            <div class="review-item-card">
+              <div class="review-date-label">November '24</div>
+              
+              <div class="review-rating-row">
+                <span class="rating-category-label">Looks:</span>
+                <div class="star-rating">
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon"></i>
+                </div>
               </div>
-              <div class="review-category">
-                <span>Performance: </span>
-                <span class="stars">★ ★ ★ ★ ☆</span>
+              
+              <div class="review-rating-row">
+                <span class="rating-category-label">Performance:</span>
+                <div class="star-rating">
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                </div>
               </div>
-              <div class="review-text">
-                <span class="quote-mark">"</span>
-                Lorem ipsum dolor sit amet consectetur. Faucibus augue amet ut tellus. Sem varius sollicitudin tellus ipsum. Non volutpat eu elit suspendisse sed tristique. Commodo vulputate non morbi pharetra
-                <span class="read-more"> Read more...</span>
+              
+              <div class="review-content-box">
+                <img src="./assets/images/image (2).jpg" alt="Jasmine" class="escort-review-image">
+                <p class="review-text">
+                  "Jasmine was amazing from the moment she walked in. Very friendly and put me at ease right away. Conversation flowed naturally and she's very intelligent. The experience itself was incredible and exactly what I was hoping for. Highly recommend!"
+                  <a href="#" class="read-more-link">Read more...</a>
+                </p>
               </div>
-              <div class="reviewer-name">Debrah</div>
+              
+              <a href="#" class="escort-profile-link">
+                <span class="escort-name">Jasmine</span>
+              </a>
+            </div>
+            
+            <!-- Review Card 3 -->
+            <div class="review-item-card">
+              <div class="review-date-label">November '24</div>
+              
+              <div class="review-rating-row">
+                <span class="rating-category-label">Looks:</span>
+                <div class="star-rating">
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                </div>
+              </div>
+              
+              <div class="review-rating-row">
+                <span class="rating-category-label">Performance:</span>
+                <div class="star-rating">
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon filled"></i>
+                  <i class="star-icon"></i>
+                </div>
+              </div>
+              
+              <div class="review-content-box">
+                <img src="./assets/images/image (2).jpg" alt="Maya" class="escort-review-image">
+                <p class="review-text">
+                  "Maya exceeded all my expectations. She's absolutely gorgeous and has the most amazing personality. She made me feel completely comfortable and the connection we had was genuine. The experience was unforgettable and I've already booked my next appointment."
+                  <a href="#" class="read-more-link">Read more...</a>
+                </p>
+              </div>
+              
+              <a href="#" class="escort-profile-link">
+                <span class="escort-name">Maya</span>
+              </a>
             </div>
           </div>
-    
-          <div class="review-item">
-            <div class="review-image-container">
-              <img 
-                src="/assets/images/front-view-woman-bdsm-aesthetics_23-2151117244 1.jpg" 
-                alt="Reviewer" 
-                class="review-image" 
-              />
-            </div>
-            <div class="review-content">
-              <div class="review-date">November '24</div>
-              <div class="review-category">
-                <span>Looks: </span>
-                <span class="stars">★ ★ ★ ★ ☆</span>
-              </div>
-              <div class="review-category">
-                <span>Performance: </span>
-                <span class="stars">★ ★ ★ ★ ☆</span>
-              </div>
-              <div class="review-text">
-                <span class="quote-mark">"</span>
-                Lorem ipsum dolor sit amet consectetur. Faucibus augue amet ut tellus. Sem varius sollicitudin tellus ipsum. Non volutpat eu elit suspendisse sed tristique. Commodo vulputate non morbi pharetra
-                <span class="read-more"> Read more...</span>
-              </div>
-              <div class="reviewer-name">Debrah</div>
-            </div>
-          </div>
-    
-          <div class="review-item">
-            <div class="review-image-container">
-              <img 
-                src="/assets/images/front-view-woman-bdsm-aesthetics_23-2151117244 1.jpg" 
-                alt="Reviewer" 
-                class="review-image" 
-              />
-            </div>
-            <div class="review-content">
-              <div class="review-date">November '24</div>
-              <div class="review-category">
-                <span>Looks: </span>
-                <span class="stars">★ ★ ★ ★ ☆</span>
-              </div>
-              <div class="review-category">
-                <span>Performance: </span>
-                <span class="stars">★ ★ ★ ★ ☆</span>
-              </div>
-              <div class="review-text">
-                <span class="quote-mark">"</span>
-                Lorem ipsum dolor sit amet consectetur. Faucibus augue amet ut tellus. Sem varius sollicitudin tellus ipsum. Non volutpat eu elit suspendisse sed tristique. Commodo vulputate non morbi pharetra
-                <span class="read-more"> Read more...</span>
-              </div>
-              <div class="reviewer-name">Debrah</div>
+          
+          <div class="review-actions">
+            <a href="#" class="add-review-btn">Write a Review</a>
+            <div class="review-navigation">
+              <button class="review-prev-btn" aria-label="Previous review">&lt;</button>
+              <button class="review-next-btn" aria-label="Next review">&gt;</button>
             </div>
           </div>
         </div>
-      </div>  
+      </section>
+
 
     </section>  
       
@@ -452,7 +468,7 @@
 
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script src="escort-grid.js"></script>
+    <script src="./assets/script/escort-grid.js"></script>
 
     <script>
       function showModels(type) {
@@ -465,6 +481,6 @@
         document.querySelector(`button[onclick="showModels('${type}')"]`).classList.add('active');
       }
     </script>
-    
+    <script src="./assets/script/include-header.js"></script>
   </body>
 </html>
