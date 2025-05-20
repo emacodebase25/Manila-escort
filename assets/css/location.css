@@ -277,6 +277,13 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
+<<<<<<< Updated upstream:assets/css/location.css
+=======
+    /* border: 1px solid var(--manila-blue); */
+    border: 0px solid transparent;
+    border-radius: 0.25rem;
+    overflow: hidden;
+>>>>>>> Stashed changes:location.css
   }
   
   .escort-tab {
