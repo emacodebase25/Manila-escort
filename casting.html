@@ -31,7 +31,35 @@
       text-decoration: none;
       color: inherit;
     }
-
+    .checkbox-container1 {
+  cursor: pointer; /* Add cursor pointer to show it's clickable */
+  transition: background-color 0.2s ease; /* Add smooth transition */
+}
+ 
+.checkbox-container1.checked {
+  background-color: #2563EB; /* Blue background when checked */
+  position: relative;
+}
+ 
+.checkbox-container1.checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+}
+.mandatory-section .service-option {
+  background-color: #FFF !important; 
+  color: #000 !important;
+  opacity: 0.85 !important; /* Better than 67% for readability */
+  transition: opacity 0.3s ease;
+}
+ 
+.mandatory-section .service-option:hover {
+  opacity: 1 !important;
+}
 
     /* header */
 
@@ -317,6 +345,7 @@
       background-color: #4169E1;
       padding: 10px;
       border-radius: 4px;
+      margin-bottom: 25px;
     }
 
     .service-name {
@@ -326,7 +355,7 @@
     .checkbox-container {
       width: 20px;
       height: 20px;
-      border: 1px solid white;
+      border: 1px solid #fff;
       display: inline-block;
       position: relative;
     }
@@ -343,7 +372,13 @@
       font-size: 18px;
       margin-bottom: 15px;
     }
-
+    .checkbox-container1 {
+      width: 20px;
+      height: 20px;
+      border: 1px solid rgb(3, 3, 3);
+      display: inline-block;
+      position: relative;
+    }
     /* Services List Section */
     .services-list-section {
       background-color: #000;
@@ -494,45 +529,147 @@
   font-size: 0.875rem;
 }
 
+
+.services-selection-container {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Style for both service boxes */
+    .service-box {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    
+    /* Service box heading */
+    .service-box-title {
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-align: center;
+      color: #4169E1;
+      padding: 5px;
+      border-bottom: 1px solid #333;
+    }
+    
+    /* Style for both scrollboxes */
+    .services-scrollbox {
+      width: 100%;
+      height: 300px; /* Increased height */
+      overflow-y: auto;
+      border: 1px solid #333;
+      padding: 10px;
+      background-color: #111;
+      scrollbar-width: thin;
+      scrollbar-color: #4169E1 #222;
+      margin-bottom: 15px;
+    }
+    
+    /* Scrollbar styling */
+    .services-scrollbox::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .services-scrollbox::-webkit-scrollbar-track {
+      background: #222;
+    }
+    
+    .services-scrollbox::-webkit-scrollbar-thumb {
+      background-color: #4169E1;
+    }
+    
+    /* Style for service items */
+    .service-list-item {
+      margin-bottom: 5px;
+      font-size: 14px;
+      padding: 8px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    /* Available services styling */
+    .available-service {
+      background-color: #1a1a1a;
+    }
+    
+    .available-service:hover {
+      background-color: #2a2a2a;
+    }
+    
+    /* Selected services styling */
+    .your-service {
+      background-color: #1a2a3a;
+    }
+    
+    .your-service:hover {
+      background-color: #2a3a4a;
+    }
+    
+    /* Action buttons on service items */
+    .service-action {
+      color: #4169E1;
+      font-weight: bold;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .services-selection-container {
+        flex-direction: column;
+      }
+      
+      .services-scrollbox {
+        height: 200px;
+      }
+    }
   </style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="container">
-          <div class="navbar">
-            <div class="logo">
-             <a href="index.html"> <img src="./assets/images/logo 1.png"></a>
-            </div>
-            
-            <nav>
-              <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li class="dropdown">
-                  <a href="#" class="nav-link dropdown-arrow">Gallery</a>
-    
-                </li>
-                <li class="dropdown">
-                  <a href="services.html" class="nav-link  dropdown-arrow">Services</a>
-    
-                </li>
-                <li class="dropdown">
-                  <a href="location.html" class="nav-link dropdown-arrow">Location</a>
-    
-                </li>
-                <li><a href="#" class="nav-link">Rates</a></li>
-                <li><a href="casting.html" class="nav-link active">Casting</a></li>
-                <li><a href="booking.html" class="nav-link">Booking</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
-              </ul>
-            </nav>
-            
-            <div class="vip-section">
-              <a href="#" class="vip-button">VIP ESCORTS</a>
-            </div>
-          </div>
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+         <a href="index.html"> <img src="./assets/images/logo.jpeg" style="height: 80px;"></a>
         </div>
-      </header>
+        
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link dropdown-arrow">Gallery</a>
+
+            </li>
+            <li class="dropdown">
+              <a href="services.html" class="nav-link  dropdown-arrow">Services</a>
+
+            </li>
+            <li class="dropdown">
+              <a href="location.html" class="nav-link dropdown-arrow">Location</a>
+
+            </li>
+            <li><a href="#" class="nav-link">Rates</a></li>
+            <li><a href="casting.html" class="nav-link active">Casting</a></li>
+            <li><a href="booking.html" class="nav-link">Booking</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="vip-section">
+          <a href="#" class="vip-button">VIP ESCORTS</a>
+        </div>
+      </div>
+    </div>
+  </header>
 
   <!-- Employment Header Section -->
   <section class="employment-header">
@@ -893,112 +1030,177 @@
       <div class="services-grid">
         <!-- Left Column -->
         <div>
-          <div class="service-option">
+          <div class="service-option" style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">Name</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">Email Address</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">National ID (Paper Type)/ Digital National ID.</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000;opacity: 67%;">
             <span class="service-name">HDMF(Pag-Ibig Loyalty Plus)</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">Phillipine Postal ID.</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">UMID</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">Police Clearance</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
         </div>
         
         <!-- Right Column -->
         <div>
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">Contact Number</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">National ID ( Card Type)</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">Passport</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">Driver's Licenses</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000;opacity: 67%;">
             <span class="service-name">PRC ID.</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">NBI Clearance</span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
           
-          <div class="service-option">
+          <div class="service-option"style="background-color: #FFF; color: #000; opacity: 67%;">
             <span class="service-name">10 Photos ( no face covered, no minor shots, no glasses) </span>
-            <span class="checkbox-container"></span>
+            <span class="checkbox-container1"></span>
           </div>
         </div>
       </div>
       
-      <button type="button" class="submit-btn">SUBMIT</button>
+      <button type="button" class="submit-btn" style="background-color: #FFF; color: #2563EB; font-weight: 600;">SUBMIT</button>
     </div>
   </section>
 
   <!-- Services List Section -->
   <section class="services-list-section">
     <div class="container">
-      <div class="services-list-container">
-        <h2 class="services-list-title">Services</h2>
-        <div class="services-scrollbox">
-          <p class="service-list-item">List</p>
-          <p class="service-list-item">69</p>
-          <p class="service-list-item">Yours</p>
-          <p class="service-list-item">100</p>
-          <p class="service-list-item">A level + &#8364 100</p>
-          <p class="service-list-item">A level + &#8364 150</p>
-          <p class="service-list-item">A level + &#8364 200</p>
-          <p class="service-list-item">A level + &#8364 50</p>
-          <p class="service-list-item">A level + &#8364 60</p>
-          <p class="service-list-item">Adult Baby Minding</p>
-          <p class="service-list-item">Anal Play</p>
-          <p class="service-list-item">Ball Busting</p>
-          <p class="service-list-item">BDSM </p>
-          <p class="service-list-item">BDSM + &#8364 100</p>
-          <p class="service-list-item">BDSM + &#8364 50</p>
-          <p class="service-list-item">BDSM Giving</p>
-          <p class="service-list-item">Belly Dance</p>
+      <h2 class="services-list-title">Services Selection</h2>
+      
+      <div class="services-selection-container">
+        <!-- Available Services Box -->
+        <div class="service-box">
+          <div class="service-box-title">Available Services</div>
+          <div class="services-scrollbox" id="available-services">
+            <div class="service-list-item available-service" data-service="69">
+              69 <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="A level + €100">
+              A level + €100 <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="A level + €150">
+              A level + €150 <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="A level + €200">
+              A level + €200 <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="A level + €50">
+              A level + €50 <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="A level + €60">
+              A level + €60 <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Adult Baby Minding">
+              Adult Baby Minding <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Anal Play">
+              Anal Play <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Ball Busting">
+              Ball Busting <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="BDSM">
+              BDSM <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="BDSM + €100">
+              BDSM + €100 <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="BDSM + €50">
+              BDSM + €50 <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="BDSM Giving">
+              BDSM Giving <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Belly Dance">
+              Belly Dance <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Body to Body Massage">
+              Body to Body Massage <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Bondage">
+              Bondage <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Couples">
+              Couples <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Deep Throat">
+              Deep Throat <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Doggy Style">
+              Doggy Style <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Double Penetration">
+              Double Penetration <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Face Sitting">
+              Face Sitting <span class="service-action">+</span>
+            </div>
+            <div class="service-list-item available-service" data-service="Fingering">
+              Fingering <span class="service-action">+</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Your Services Box -->
+        <div class="service-box">
+          <div class="service-box-title">Yours</div>
+          <div class="services-scrollbox" id="your-services">
+            <!-- Selected services will appear here -->
+          </div>
         </div>
       </div>
+      
+      <button type="button" class="submit-btn" id="services-submit-btn">CONFIRM SERVICES</button>
     </div>
   </section>
+
 
   <!-- Photos Section -->
   <section class="photos-section">
@@ -1041,23 +1243,97 @@
   </footer>
 
   <script>
-    // JavaScript to handle form interactions would go here
+    // Your existing JavaScript
+    
+    // Add this new JavaScript for the services selection feature
     document.addEventListener('DOMContentLoaded', function() {
-      // Example: Add click handlers to checkboxes
-      const checkboxes = document.querySelectorAll('.checkbox-container');
-      checkboxes.forEach(checkbox => {
+      // Handle checkboxes as in your original code
+      const allCheckboxes = document.querySelectorAll('.checkbox-container, .checkbox-container1');
+      
+      allCheckboxes.forEach(checkbox => {
         checkbox.addEventListener('click', function() {
           this.classList.toggle('checked');
-          if (this.classList.contains('checked')) {
-            this.style.backgroundColor = '#fff';
-          } else {
-            this.style.backgroundColor = 'transparent';
+          
+          if(this.classList.contains('checkbox-container')) {
+            if (this.classList.contains('checked')) {
+              this.style.backgroundColor = '#fff';
+            } else {
+              this.style.backgroundColor = 'transparent';
+            }
           }
         });
       });
       
-      // Example: Form submission handlers
-      const submitButtons = document.querySelectorAll('.submit-btn, .submit-form-btn');
+      // Services selection functionality
+      const availableServices = document.getElementById('available-services');
+      const yourServices = document.getElementById('your-services');
+      
+      if (availableServices && yourServices) {
+        // Add click event to the available services container using event delegation
+        availableServices.addEventListener('click', function(event) {
+          // Find the closest service item that was clicked
+          const serviceItem = event.target.closest('.service-list-item');
+          
+          if (serviceItem && serviceItem.classList.contains('available-service')) {
+            // Get the service name
+            const serviceName = serviceItem.dataset.service;
+            
+            // Create a new service item for "Your Services"
+            const newServiceItem = document.createElement('div');
+            newServiceItem.className = 'service-list-item your-service';
+            newServiceItem.dataset.service = serviceName;
+            newServiceItem.innerHTML = `${serviceName} <span class="service-action">-</span>`;
+            
+            // Add to your services
+            yourServices.appendChild(newServiceItem);
+            
+            // Remove from available services
+            serviceItem.remove();
+          }
+        });
+        
+        // Add click event to your services container
+        yourServices.addEventListener('click', function(event) {
+          // Find the closest service item that was clicked
+          const serviceItem = event.target.closest('.service-list-item');
+          
+          if (serviceItem && serviceItem.classList.contains('your-service')) {
+            // Get the service name
+            const serviceName = serviceItem.dataset.service;
+            
+            // Create a new service item for "Available Services"
+            const newServiceItem = document.createElement('div');
+            newServiceItem.className = 'service-list-item available-service';
+            newServiceItem.dataset.service = serviceName;
+            newServiceItem.innerHTML = `${serviceName} <span class="service-action">+</span>`;
+            
+            // Add to available services
+            availableServices.appendChild(newServiceItem);
+            
+            // Remove from your services
+            serviceItem.remove();
+          }
+        });
+        
+        // Handle the submit button for services
+        const servicesSubmitBtn = document.getElementById('services-submit-btn');
+        if (servicesSubmitBtn) {
+          servicesSubmitBtn.addEventListener('click', function() {
+            // Get all selected services
+            const selectedServices = Array.from(yourServices.querySelectorAll('.your-service'))
+              .map(item => item.dataset.service);
+            
+            // You can do something with the selected services here
+            // For example, store them in a hidden input for form submission
+            console.log('Selected services:', selectedServices);
+            
+            alert('Services confirmed: ' + selectedServices.join(', '));
+          });
+        }
+      }
+      
+      // Form submission handlers (from your original code)
+      const submitButtons = document.querySelectorAll('.submit-btn:not(#services-submit-btn), .submit-form-btn');
       submitButtons.forEach(button => {
         button.addEventListener('click', function() {
           alert('Form submitted successfully!');

@@ -177,6 +177,39 @@
   padding: 0 15px;
 }
 
+/* 
+  hero section */
+
+  .hero-section {
+    height: 550px;
+    position: relative;
+    background-image: url('/assets/images/hero-img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  } 
+
 
 /* Navigation bar styles */
 .filter-navigation {
@@ -381,6 +414,74 @@
   }
 
   /* Additional CSS for FAQ Section */
+
+
+.faq-section {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.faq-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.faq-section p.text-center {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+
+.faq-question {
+  background-color: #2563eb; /* Blue background */
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.faq-icon {
+  margin-right: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.faq-answer {
+  background-color: #000000; /* Black background */
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-answer.open {
+  padding: 20px;
+  max-height: 500px;
+}
+
+.faq-answer p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 
   /* Additional CSS for Category Section */
 
