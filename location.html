@@ -8,7 +8,11 @@
     <meta name="description" content="Metro Manila's #1 escort service" />
     <meta name="author" content="Manila Asian Escorts" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/location.css">
+      <link rel="stylesheet" href="./assets/css/hero.css">
+
 <script src="./assets/script/main.js"></script>
 
 
@@ -160,8 +164,37 @@
   <body>
     <div class="app">
   <!-- Header & Navigation -->
- 
-<div id="header-placeholder"></div>
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="./assets/images/logo.jpeg" alt="Logo"></a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu" class="nav-menu">
+          <ul>
+            <li><a href="index.html" class="nav-link ">Home</a></li>
+            <li><a href="#" class="nav-link">Gallery</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="location.html" class="nav-link active">Location</a></li>
+            <li><a href="#" class="nav-link">Rates</a></li>
+            <li><a href="casting.html" class="nav-link">Casting</a></li>
+            <li><a href="booking.html" class="nav-link">Booking</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="vip-section">
+          <a href="#" class="vip-button">VIP ESCORTS</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
          
           <!-- Hero Section -->
           <section class="hero-section">
@@ -241,7 +274,7 @@
        <section>
       <div class="galleries-section">
         <div class="container">
-          <h2 class="section-title centered">
+          <h2 class="section-title centered" style="font-size: 30px; display: flex; justify-content: center; align-items: center;">
             You might also be interested in the following galleries :
           </h2>
           
@@ -471,6 +504,14 @@
         
       </footer>
     </div>
+
+
+      <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('active');
+    });
+  </script>
 
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>

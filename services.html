@@ -6,21 +6,53 @@
   <title>Manila Luxury model - Premium Tour Services</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="./assets/css/index.css">
   <link rel="stylesheet" href="./assets/css/services.css">
+      <link rel="stylesheet" href="./assets/css/header.css">
+        <link rel="stylesheet" href="./assets/css/hero.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
 <script src="./assets/script/main.js"></script>
 </head>
 <body>
   <!-- Header & Navigation -->
- 
-<div id="header-placeholder"></div>
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="./assets/images/logo.jpeg" alt="Logo"></a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu" class="nav-menu">
+          <ul>
+            <li><a href="index.html" class="nav-link ">Home</a></li>
+            <li><a href="#" class="nav-link">Gallery</a></li>
+            <li><a href="services.html" class="nav-link active">Services</a></li>
+            <li><a href="location.html" class="nav-link">Location</a></li>
+            <li><a href="#" class="nav-link">Rates</a></li>
+            <li><a href="casting.html" class="nav-link">Casting</a></li>
+            <li><a href="booking.html" class="nav-link">Booking</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="vip-section">
+          <a href="#" class="vip-button">VIP ESCORTS</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
  
   <!-- Hero Section -->
           <!-- Hero Section -->
           <section class="hero-section">
             <div class="hero-overlay"></div>
-            <div class="hero-content">
+            <div class="hero-content" style="font-family: 'Poppins', sans-serif;">
               <h1 class="text-5xl md:text-6xl font-bold mb-4">Metro Manila's #1<br>model Service.</h1>
               <p class="text-4xl mb-6">We Are Open 24/7</p>
               <p class="text-xl mb-8 max-w-lg">Drama and Scam free environment!<br>Browse and enjoy the best model agency in the Philippines!</p>
@@ -70,7 +102,7 @@
           <div class="models-layout">
               <div class="models-grid">
                 <!-- Escort Cards -->
-                <div class="escort-card">
+                <div class="escort-card" data-link="model.html">
                   <img src="/assets/images/model-location 1.png" alt="Escort" class="escort-image">
                   <div class="escort-info">
                     <h3 class="escort-name">Gloria</h3>
@@ -78,7 +110,7 @@
                   </div>
                 </div>
                 
-                <div class="escort-card">
+                <div class="escort-card" data-link="model.html">
                   <img src="/assets/images/model-location 1.png" alt="Escort" class="escort-image">
                   <div class="escort-info">
                     <h3 class="escort-name">Jessica</h3>
@@ -86,7 +118,7 @@
                   </div>
                 </div>
                 
-                <div class="escort-card">
+                <div class="escort-card" data-link="model.html">
                   <img src="/assets/images/model-location 1.png" alt="Escort" class="escort-image">
                   <div class="escort-info">
                     <h3 class="escort-name">Samantha</h3>
@@ -94,7 +126,7 @@
                   </div>
                 </div>
                 
-                <div class="escort-card">
+                <div class="escort-card" data-link="model.html">
                   <img src="/assets/images/model-location 1.png" alt="Escort" class="escort-image">
                   <div class="escort-info">
                     <h3 class="escort-name">Michelle</h3>
@@ -102,7 +134,7 @@
                   </div>
                 </div>
                 
-                <div class="escort-card">
+                <div class="escort-card" data-link="model.html">
                   <img src="/assets/images/model-location 1.png" alt="Escort" class="escort-image">
                   <div class="escort-info">
                     <h3 class="escort-name">Lisa</h3>
@@ -110,7 +142,7 @@
                   </div>
                 </div>
               
-              <div class="escort-card">
+              <div class="escort-card" data-link="model.html">
                 <img src="/assets/images/model-location 1.png" alt="Escort" class="escort-image">
                 <div class="escort-info">
                   <h3 class="escort-name">Diana</h3>
@@ -118,7 +150,7 @@
                 </div>
               </div>
               
-              <div class="escort-card">
+              <div class="escort-card" data-link="model.html">
                 <img src="/assets/images/model-location 1.png" alt="Escort" class="escort-image">
                 <div class="escort-info">
                   <h3 class="escort-name">Jennifer</h3>
@@ -126,7 +158,7 @@
                 </div>
               </div>
               
-              <div class="escort-card">
+              <div class="escort-card"data-link="model.html">
                 <img src="/assets/images/model-location 1.png" alt="Escort" class="escort-image">
                 <div class="escort-info">
                   <h3 class="escort-name">Patricia</h3>
@@ -134,7 +166,7 @@
                 </div>
               </div>
               
-              <div class="escort-card">
+              <div class="escort-card" data-link="model.html">
                 <img src="/assets/images/model-location 1.png" alt="Escort" class="escort-image">
                 <div class="escort-info">
                   <h3 class="escort-name">Angelica</h3>
@@ -144,6 +176,7 @@
             </div>
         </div>
         </div>
+        <br><br>
 
       </div>
           <div class="view-more-container">
@@ -177,95 +210,91 @@
       </div>
     </section>
 
-  <!-- International model Service -->
-  <section class="py-10 blue-section">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-6 text-center">International Escorts Service</h2>
-      <p class="text-center mb-8">Need a knowledgeable, professional escort to accompany you to dinner or an event? We offer a premium luxury tour escort service that pairs you with certified professionals, strictly by appointment, and catering to a select clientele who value discretion.</p>
-      
-      <p class="mb-8">Mynt Models represents elegant, educated escorts and dinner escorts, model companions and hostesses in many top cities, luxury model destinations and tropical destinations, such as:</p>
-
-        <div class="locations-grid">
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> New York
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Boston
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Berlin
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Mykonos
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Los Angeles
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> London
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Monaco
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Maldives
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> San Francisco
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Paris
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Dubai
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Caribbean
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Miami
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Monte Carlo
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Doha
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Bermuda
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Houston
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Istanbul
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Singapore
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Fiji
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Atlanta
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Amsterdam
-          </div>
-          <div class="location-item">
-            <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Hong Kong
-          </div>
-        </div>
-
-      <p class="text-center mb-8"><br>And more. We can accommodate you in most cities with five-star facilities.</p>
-      
-      <p class="mb-8">With our Models dedicated concierge service, discover friendly, luxurious, and well-bred companions in all parts of the world. We are proud to provide you with luxury companion services.</p>
-
-      <div class="text-center">
-        <a href="#" class="inline-block bg-blue-800 text-white px-8 py-3 rounded">READ MORE</a>
+  <!-- International Service Section -->
+<section class="international-service">
+  <div class="container">
+    <h2 class="service-title">International Travel Escort Service</h2>
+    <p class="service-desc">Need a beautiful travel companion to escort you to dinner? We provide premium female courteous service that operates worldwide, strictly by appointment, and catering to a select clientele who seek the highest quality.</p>
+    
+    <p class="service-desc">Mynt Models represents elegant, educated models and dinner escorts, travel companions and businesses in many top cities, luxury travel locations and tropical destinations, such as:</p>
+    
+    <div class="locations-grid">
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> New York
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Boston
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Berlin
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Mykonos
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Los Angeles
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> London
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Monaco
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Maldives
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> San Francisco
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Paris
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Dubai
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Caribbean
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Miami
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Monte Carlo
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Doha
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Bermuda
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Houston
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Istanbul
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Singapore
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Fiji
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Atlanta
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Amsterdam
+      </div>
+      <div class="location-item">
+        <span class="location-icon"><i class="fa-solid fa-location-dot"></i></span> Hong Kong
       </div>
     </div>
-  </section>
+    
+    <p style="margin-top: 20px;">And more. We can accommodate you in any location with five-star facilities.</p>
+    
+    <p>With Mynt Models dedicated concierge service, discover friendly, feminine, and well-bred companions whose warm personalities provide you with luxury companionship.</p>
+  </div>
+</section>
 
 
 
@@ -385,26 +414,24 @@
   </section>
 
 
-      <!-- Galleries Section -->
-      <div class="galleries-section">
-        <div class="container">
-          <h2 class="section-title centered" style="font-size: 35px; font-weight: 400;">
-            You might also be interested in the following galleries :
-          </h2>
-          
-          <div class="galleries-grid">
-            <button class="gallery-btn white">Busty Escorts</button>
-            <button class="gallery-btn white">Brunette Escorts</button>
-            <button class="gallery-btn white">Party Girl Escorts</button>
-            <button class="gallery-btn white">Petit Escorts</button>
-            <button class="gallery-btn white">30 minutes Escorts</button>
-            <button class="gallery-btn white">Natural Breast Escort</button><br><br>
-            <button class="gallery-btn white">Selfies Gallery</button>
-            <button class="gallery-btn white">Water sport gallery</button>
-            <button class="gallery-btn white">New Girls escort</button>
-          </div>
-        </div>
-      </div>
+<!-- Galleries Section -->
+<section class="galleries-section">
+  <div class="container">
+    <h2 class="galleries-title">You might be also interested in the following galleries</h2>
+    
+    <div class="gallery-buttons">
+      <button class="gallery-btn white">Busty escorts</button>
+      <button class="gallery-btn white">Party girls escorts</button>
+      <button class="gallery-btn white">Erotic massage escorts</button>
+      <button class="gallery-btn white">Petite escorts</button>
+      <button class="gallery-btn white">Natural breast escorts</button>
+      <button class="gallery-btn white">Brunette escorts</button>
+      <button class="gallery-btn white">Selfies gallery</button>
+      <button class="gallery-btn white">New girls escorts</button>
+      <button class="gallery-btn white">30 minutes escorts</button>
+    </div>
+  </div>
+</section>
 
   <!-- model Magazine Section -->
 <section class="py-10 bg-black">
@@ -482,6 +509,12 @@
         
       </footer>
 
+        <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('active');
+    });
+  </script>
   <script>
     // Simple JavaScript for mobile menu toggle
     document.addEventListener('DOMContentLoaded', function() {
@@ -503,6 +536,20 @@
       });
     });
   </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.escort-card').forEach(function (card) {
+      card.addEventListener('click', function () {
+        const link = card.getAttribute('data-link');
+        if (link) {
+          window.location.href = link;
+        }
+      });
+    });
+  });
+</script>
+
 
 
 <script src="./assets/script/include-header.js"></script>

@@ -15,7 +15,6 @@ class EscortGrid extends HTMLElement {
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
-    border: 1px solid var(--manila-blue);
     border-radius: 0.25rem;
     overflow: hidden;
     gap:1rem;

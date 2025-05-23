@@ -6,15 +6,48 @@
   <title>Manila Luxury model - Premium Tour Services</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/hero.css">
+
   <script src="./assets/script/main.js"></script>
 
 
 </head>
 <body>
   <!-- Header & Navigation -->
- 
-<div id="header-placeholder"></div>
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="./assets/images/logo.jpeg" alt="Logo"></a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu" class="nav-menu">
+          <ul>
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="#" class="nav-link">Gallery</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="location.html" class="nav-link">Location</a></li>
+            <li><a href="#" class="nav-link">Rates</a></li>
+            <li><a href="casting.html" class="nav-link">Casting</a></li>
+            <li><a href="booking.html" class="nav-link">Booking</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="vip-section">
+          <a href="#" class="vip-button">VIP ESCORTS</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
  
   <!-- Hero Section -->
           <!-- Hero Section -->
@@ -253,9 +286,11 @@
 </div>
 
 
-<a href="#" class="add-review-button">Click Here to add a Review »</a>
-<br>
+
+
 <div class="faq">
+
+  <a href="#" class="add-review-button">Click Here to add a Review »</a>
 
   <!-- FAQ Section -->
   <section class="faq-section">
@@ -402,11 +437,18 @@
     });
   </script>
 
-<script src="escort-grid.js"></script>
+<script src="./assets/script/escort-grid.js"></script>
 
 
 
 <!-- Place THIS here -->
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('active');
+    });
+  </script>
 
 
 <script>
