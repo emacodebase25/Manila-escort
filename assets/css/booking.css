@@ -2,13 +2,25 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
             
         }
+
+
+        @font-face {
+  font-family: 'Tampron';
+  src: url('./fonts/Tampron.woff') format('woff');
+}
+
+.tampron-text {
+  font-family: 'Tampron', cursive;
+  font-size: 30px;
+}
         
         body {
             background-color: #000;
             color: #fff;
-            font-family: 'Poppins', sans-serif;
+            
         }
 
 

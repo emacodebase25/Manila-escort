@@ -12,7 +12,12 @@
       line-height: 1.5;
     }
   
-
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
 
     .checkbox-container1 {
   cursor: pointer; /* Add cursor pointer to show it's clickable */
@@ -231,8 +236,11 @@
     }
 
     .services-list-title {
-      font-size: 18px;
+      font-size: 25px;
       margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .services-scrollbox {

@@ -16,7 +16,7 @@
       background-color: rgba(0, 0, 0, 0.8);
     }
     .blue-section {
-      background-color: #1e3a8a;
+      background-color: #4169E1;
     }
 
 
@@ -79,7 +79,7 @@
   /* Additional CSS for Reviews Section */
 
 .reviews-section {
-    background-color: #2563eb; /* Blue background */
+    background-color: #2563eb; 
     padding: 40px 0;
     color: #ffffff;
   }
@@ -346,7 +346,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 1.5rem;
-    border: 1px solid var(--manila-blue);
+    border: 1px solid #4169E1;
     border-radius: 0.25rem;
     overflow: hidden;
   }
@@ -358,7 +358,7 @@
   }
   
   .escort-tab.active {
-    background-color: var(--manila-blue);
+    background-color: #4169E1;
     color: var(--white);
   }
   
@@ -390,7 +390,7 @@
 
 /* Escort Card Style */
 .escort-card {
-  background-color: #2563EB;
+  background-color: #4169E1;
   border-radius: 8px;
   overflow: hidden;
   text-align: center;
@@ -436,7 +436,7 @@
 
 /* International service */
 .international-service {
-  background-color: #2563EB;
+  background-color: #4169E1;
   padding: 30px 0;
   text-align: center;
 }

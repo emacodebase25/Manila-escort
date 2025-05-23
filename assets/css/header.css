@@ -1,4 +1,4 @@
-/* STANDARDIZED HEADER CSS - USE THIS ON ALL PAGES */
+
 
 /* Header */
 .header {
@@ -230,6 +230,7 @@
   font-size: 24px;
   color: white;
   cursor: pointer;
+   margin-left: auto;
 }
 
 .nav-menu ul {
@@ -269,6 +270,6 @@
   }
 
   .vip-section {
-    display: none;
+    display: inline-block !important;
   }
 }
