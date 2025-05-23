@@ -6,123 +6,49 @@
   <title>Manila Luxury model - Premium Tour Services</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="/index.css">
-  <link rel="stylesheet" href="/booking.css">
-  <script src="main.js"></script>
-  <style>
-    
-  /* Additional CSS for FAQ Section */
-
-.faq-section {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 40px 0;
-  }
-  
-  .faq-section h2 {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #ffffff;
-    text-align: center;
-  }
-  
-  .faq-section p.text-center {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    font-size: 16px;
-  }
-  
-  .faq-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .faq-item {
-    margin-bottom: 2px;
-    overflow: hidden;
-  }
-  
-  .faq-question {
-    background-color: #2563eb; /* Blue background */
-    padding: 15px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
-  .faq-icon {
-    margin-right: 15px;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  .faq-answer {
-    background-color: #000000; /* Black background */
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .faq-answer.open {
-    padding: 20px;
-    max-height: 500px;
-  }
-  
-  .faq-answer p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  </style>
-
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/booking.css">
+  <link rel="stylesheet" href="./assets/css/hero.css">
+<script src="./assets/script/main.js"></script>
   </head>
 
   <body>
-      <!-- Header & Navigation -->
- 
-      <header class="header">
-        <div class="container">
-          <div class="navbar">
-            <div class="logo">
-             <a href="index.html"> <img src="./assets/images/logo.jpeg" style="height: 80px;"></a>
-            </div>
-            
-            <nav>
-              <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li class="dropdown">
-                  <a href="#" class="nav-link dropdown-arrow">Gallery</a>
-    
-                </li>
-                <li class="dropdown">
-                  <a href="services.html" class="nav-link  dropdown-arrow">Services</a>
-    
-                </li>
-                <li class="dropdown">
-                  <a href="location.html" class="nav-link dropdown-arrow">Location</a>
-    
-                </li>
-                <li><a href="#" class="nav-link">Rates</a></li>
-                <li><a href="casting.html" class="nav-link">Casting</a></li>
-                <li><a href="booking.html" class="nav-link  active">Booking</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
-              </ul>
-            </nav>
-            
-            <div class="vip-section">
-              <a href="#" class="vip-button">VIP ESCORTS</a>
-            </div>
-          </div>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="./assets/images/logo.jpeg" alt="Logo"></a>
         </div>
-      </header>
+
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu" class="nav-menu">
+          <ul>
+            <li><a href="index.html" class="nav-link ">Home</a></li>
+            <li><a href="#" class="nav-link">Gallery</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="location.html" class="nav-link">Location</a></li>
+            <li><a href="#" class="nav-link">Rates</a></li>
+            <li><a href="casting.html" class="nav-link">Casting</a></li>
+            <li><a href="booking.html" class="nav-link active">Booking</a></li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="vip-section">
+          <a href="#" class="vip-button">VIP ESCORTS</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
     
-  <!-- Hero Section -->
           <!-- Hero Section -->
           <section class="hero-section">
             <div class="hero-overlay"></div>
@@ -136,6 +62,7 @@
 
   <main>
  
+    <!-- form section  -->
     <!-- form section  -->
     <section>
         <form action="">
@@ -224,51 +151,72 @@
          <!-- /.form-group -->
           </form>
     </section>
-
-
-
-  <!-- FAQ Section -->
-  <section class="faq-section">
-    <div class="container mx-auto px-4 py-10">
-      <h2 class="text-center text-4xl font-bold mb-6">FAQs about Manila Models</h2>
-      
-      <p class="text-center mb-10">
-        We provide answers to common questions that potential clients may have about their high-class travel services with us.
-      </p>
-      
-      <div class="faq-container">
-        <!-- FAQ Item 1 (Open) -->
-        <div class="faq-item">
-          <div class="faq-question active">
-            <span class="faq-icon">-</span> What does Manila Models provide?
-          </div>
-          <div class="faq-answer open">
-            <p>We specialize in discreet, naturally beautiful and friendly companions who offer an exceptional luxury travel experience. With a first-class approach, nothing is superficial or robotic. Selective clients can meet a beautiful businesswoman, gorgeous model or professional guide, VIP celebrity or actress companion, or an adorable high-class travel companion, in a real-date environment. In our relentless drive for excellence, our standards are high.</p>
-          </div>
+    
+    <div class="submission-row">
+        <button class="btn-submit">Submit Booking</button>
+        <div class="recaptcha">
+            
+                       <div class="recaptcha-box" style="margin-right: 40px; margin-bottom: 40px;">reCAPTCHA</div>
         </div>
-        
-        <!-- FAQ Item 2 (Closed) -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span class="faq-icon">+</span> How is Manila Models VIP travel agency different from other international travel agencies?
-          </div>
-          <div class="faq-answer">
-            <p>Unlike standard agencies, we personally interview and select each guide to ensure they meet our strict standards for beauty, intelligence, and personality. We focus on quality over quantity, maintaining a select roster of exceptional companions who are not only visually stunning but also engaging conversationalists and culturally knowledgeable. Our service is truly global, with connections in major cities worldwide, and we offer unparalleled discretion and personalization for each client's needs.</p>
-          </div>
-        </div>
-        
-        <!-- FAQ Item 3 (Closed) -->
-        <div class="faq-item">
-          <div class="faq-question">
-            <span class="faq-icon">+</span> What kind of people love Manila Models?
-          </div>
-          <div class="faq-answer">
-            <p>Our clients are typically successful, discerning individuals who value quality experiences and meaningful connections. They include business executives seeking companions for corporate events, international travelers wanting knowledgeable local guides, and sophisticated individuals looking for engaging company at social functions. Our clients appreciate beauty, intelligence, and discretion—they're looking for more than just a tour guide; they want an authentic connection with someone who enhances their experience in Manila.</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
+
+
+
+
+        <!-- FAQ Section -->
+    
+    <div class="faq-section">
+        <h2 style="font-size: 40px;">FAQs about Mynt Models</h2>
+        <p>We provide answers to common questions that potential clients may have about their high-class escort services with us</p>
+        
+        <div class="accordion">
+            <div class="accordion-header">What does Mynt Models provide?</div>
+            <div class="accordion-content">
+                We specialize in discrete, beautiful beautiful and friendly companions who offer an exceptional luxury experience. With a first-class approach, nothing is superfluous or rushed. Selected for their personality, natural beauty, model or supermodel-esque VIP presence or actress level high-class travel companions, it's an upscale environment. In our relentless drive for excellence, our standards are high.
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">How is Mynt Models VIP escort agency different from other international escort agencies?</div>
+            <div class="accordion-content">
+                Content would appear here when expanded.
+            </div>
+        </div>
+        
+        <div class="accordion">
+            <div class="accordion-header">What kind of people love Mynt Models?</div>
+            <div class="accordion-content">
+                Content would appear here when expanded.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    // Hide all accordion contents
+                    document.querySelectorAll('.accordion-content').forEach(item => {
+                        item.style.display = 'none';
+                    });
+                    // Show the clicked one
+                    content.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+    
+
+
 
 </main>
 
@@ -299,21 +247,15 @@
       </footer>
 
 
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          const items = document.querySelectorAll('.accordion button');
-      
-          function toggleAccordion() {
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            items.forEach((btn) => btn.setAttribute('aria-expanded', 'false'));
-            if (!isExpanded) {
-              this.setAttribute('aria-expanded', 'true');
-            }
-          }
-      
-          items.forEach((item) => item.addEventListener('click', toggleAccordion));
-        });
-      </script>
+      <script src="./assets/script/include-header.js"></script>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
 
 
   </body>

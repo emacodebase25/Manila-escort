@@ -6,359 +6,48 @@
   <title>Manila Luxury model - Premium Tour Services</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="/index.css">
-  <script src="main.js"></script>
+    <link rel="stylesheet" href="./assets/css/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/hero.css">
 
-  <style>
-.heading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center; 
-}
-.heading h1{
-  font-size: 60px;
-  align-self: center;
-
-}
-.sub-heading{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center; 
-}
-
-.sub-heading h3{
-  font-size: 30px;
-}
-.escort-button-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px 0;
-}
-
-.Escort-buttons {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-  background-color: #4169E1;
-  color: white;
-}
-
-/* review section */
-.reviews-container{
-  background: #4169E1;
-
-}
-.reviews-title{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-}
+  <script src="./assets/script/main.js"></script>
 
 
-.review-card {
-      background-color: white;
-      border-radius: 10px;
-      width: 300px;
-      padding: 20px;
-      flex-shrink: 0;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    .reviewer-name {
-      color: #1EAEDB;
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    
-    .review-image {
-      width: 80px;
-      height: 80px;
-      border-radius: 5px;
-      object-fit: cover;
-      margin-right: 15px;
-      float: left;
-    }
-    
-    .review-text {
-      color: #333;
-      line-height: 1.4;
-      margin-bottom: 15px;
-      font-size: 14px;
-
-    }
-    
-    .read-more {
-      color: #1EAEDB;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
-    
-    .review-date {
-      font-size: 14px;
-      color: #000;
-      margin-bottom: 5px;
-    }
-    
-    .review-ratings {
-      margin-top: 10px;
-      clear: both;
-      background: #2563EB;
-      width: 250px;
-    }
-    
-    .rating-category {
-      display: flex;
-      align-items: center;
-      margin-bottom: 5px;
-    }
-    
-    .category-name {
-      min-width: 80px;
-      font-size: 14px;
-      color: #000;
-    }
-    
-    .stars {
-      color: gold;
-      letter-spacing: 2px;
-    }
-    
-    .add-review-button {
-      display: block;
-      width: 250px;
-      margin: 30px auto 0;
-      padding: 12px 0;
-      background-color: #4169E1;
-      color: white;
-      text-align: center;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      border: 2px solid white;
-    }
-    .reviews-carousel{
-      display: flex;
-       gap: 20px; 
-      overflow-x: auto; 
-       padding: 20px 0;
-       justify-content: center;
-       align-items: center;
-    }
-    @media (max-width: 768px) {
-      .reviews-carousel {
-        flex-direction: column;
-        align-items: center;
-      }
-      
-      .review-card {
-        width: 100%;
-        max-width: 300px;
-      }
-    }
-
-
-  /* faq section
-    */
-    .FAQSection {
-  margin: 0 auto;
-  padding: 4rem;
-  max-width: 768px;
-
-}
-.FAQSection h2{
-  font-size: 50px;
-
-}
-.accordion .accordion-item {
-  border-bottom: 1px solid #ccc;
-}
-
-.accordion button {
-  width: 100%;
-  background-color: #4169E1; 
-  color: white; 
-  border: none;
-  outline: none;
-  padding: 1rem 0;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #333;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-
-.accordion .icon {
-  width: 20px;
-  height: 20px;
-  border: 1px solid;
-  border-radius: 50%;
-  position: relative;
-}
-
-.accordion .icon::before,
-.accordion .icon::after {
-  content: '';
-  position: absolute;
-  background: currentColor;
-}
-
-.accordion .icon::before {
-  top: 9px;
-  left: 4px;
-  width: 12px;
-  height: 2px;
-}
-
-.accordion .icon::after {
-  top: 4px;
-  left: 9px;
-  width: 2px;
-  height: 12px;
-}
-
-.accordion button[aria-expanded="true"] .icon::after {
-  display: none;
-}
-
-.accordion .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-}
-
-.accordion button[aria-expanded="true"] + .accordion-content {
-  max-height: 200px;
-  opacity: 1;
-}
-
-.accordion .accordion-content p {
-  padding: 1rem 0;
-  color: #fff;
-}
-/* Models Section */
-.models-section {
-    padding: 2.5rem 0;
-  }
-  
-  .escorts-tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    border: 1px solid var(--manila-blue);
-    border-radius: 0.25rem;
-    overflow: hidden;
-  }
-  
-  .escort-tab {
-    padding: 0.5rem 1rem;
-    background-color: transparent;
-    color: var(--white);
-  }
-  
-  .escort-tab.active {
-    background-color: var(--manila-blue);
-    color: var(--white);
-  }
-  
-  .models-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  @media (min-width: 1024px) {
-    .models-layout {
-      flex-direction: row;
-    }
-  }
-  
-  /* Tab toggle control */
-.models-container {
-  display: none;
-}
-
-.models-container.active {
-  display: block;
-}
-
-/* Grid layout control */
-.models-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1rem;
-  flex-grow: 1;
-}
-
-@media (min-width: 640px) {
-  .models-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 768px) {
-  .models-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.faq{
-  height: max-content;
-}
-
-
-  </style>
 </head>
 <body>
   <!-- Header & Navigation -->
- 
   <header class="header">
     <div class="container">
       <div class="navbar">
         <div class="logo">
-         <a href="index.html"> <img src="./assets/images/logo.jpeg" style="height: 80px;"></a>
+          <a href="index.html"><img src="./assets/images/logo.jpeg" alt="Logo"></a>
         </div>
-        
-        <nav>
-          <ul class="nav-menu">
+
+        <div class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="nav-menu" class="nav-menu">
+          <ul>
             <li><a href="index.html" class="nav-link active">Home</a></li>
-            <li class="dropdown">
-              <a href="#" class="nav-link dropdown-arrow">Gallery</a>
-
-            </li>
-            <li class="dropdown">
-              <a href="services.html" class="nav-link  dropdown-arrow">Services</a>
-
-            </li>
-            <li class="dropdown">
-              <a href="location.html" class="nav-link dropdown-arrow">Location</a>
-
-            </li>
+            <li><a href="#" class="nav-link">Gallery</a></li>
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="location.html" class="nav-link">Location</a></li>
             <li><a href="#" class="nav-link">Rates</a></li>
             <li><a href="casting.html" class="nav-link">Casting</a></li>
             <li><a href="booking.html" class="nav-link">Booking</a></li>
             <li><a href="#" class="nav-link">Contact</a></li>
           </ul>
         </nav>
-        
+
         <div class="vip-section">
           <a href="#" class="vip-button">VIP ESCORTS</a>
         </div>
       </div>
     </div>
   </header>
+
  
   <!-- Hero Section -->
           <!-- Hero Section -->
@@ -597,9 +286,11 @@
 </div>
 
 
-<a href="#" class="add-review-button">Click Here to add a Review »</a>
-<br>
+
+
 <div class="faq">
+
+  <a href="#" class="add-review-button">Click Here to add a Review »</a>
 
   <!-- FAQ Section -->
   <section class="faq-section">
@@ -746,11 +437,18 @@
     });
   </script>
 
-<script src="escort-grid.js"></script>
+<script src="./assets/script/escort-grid.js"></script>
 
 
 
 <!-- Place THIS here -->
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('active');
+    });
+  </script>
 
 
 <script>
@@ -764,6 +462,7 @@
     document.querySelector(`button[onclick="showModels('${type}')"]`).classList.add('active');
   }
 </script>
+  <script src="./assets/script/include-header.js"></script>
 
 </body>
 </html>
