@@ -1,0 +1,119 @@
+body{background: #000}
+.herobanner img{
+	width: 100%;
+}
+p{font-size: 18px;}
+.primarybg{
+	background: #4169E1;}
+.filter-form .form-select
+{
+	background: #4169E1;color: #FFF;border: 1px solid #4169E1;padding: 7px;
+}
+.filter-form.ingfl.primarybg .form-select{
+	background: #FFF;color: #FFF;border: 1px solid #4169E1;padding: 7px;
+}
+.formcasting .form-control{
+    background:#2d4898; color:#FFF;margin-bottom:15px;
+}
+.formcasting input[type=checkbox] {
+   
+    width: 30px;
+    height: 30px;
+}
+.formcasting input::placeholder{color:#FFF !important;opacity:0.5;}
+.selectt{ background:#2d4898; color:#FFF;padding:15px; border-radius:7px;margin-bottom:15px;}
+.title-home, .models-grid p{color:#FFF}
+.models-grid p{}
+.location-service,.review{background: #4169E1;}
+
+.location-service .icon-list li{list-style: none;line-height: 36px}
+.location-service .icon-list li a{font-size: 18px;color: #FFF;display: block;text-decoration: none;}
+#accordionPlusMinus .accordion-button {
+  flex-direction: row-reverse;
+  justify-content:
+  start; margin-left: 0;
+  margin-right: 15px;
+}
+#accordionPlusMinus .accordion-button:not(.collapsed) {
+  background: #4169E1;color: #FFF;
+}
+#accordionPlusMinus .accordion-button:not(.collapsed)::after {
+  margin-left: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 2'%3E%3Cpath fill='none' stroke='%23D0364E' stroke-linecap='round' stroke-width='2' d='M8 1H1m7 0h7'/%3E%3C/svg%3E");
+  transform-origin: 50% 25%;
+  filter: brightness(0) invert(1);
+}
+#accordionPlusMinus .accordion-button::after {
+  width: 1.25rem;
+  height: 1.25rem;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 1v7m0 7V8m0 0H1m7 0h7' stroke='%233482B5' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  justify-content: start;
+  margin-left: 0;
+  margin-right: 15px;
+  filter: brightness(0) invert(1);
+}
+.article-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+ 
+}
+
+.article-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+.article-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #FFF;
+}
+.testi-monial{color: #FFF;border: 1px solid #FFF;padding: 7px;}
+.faq .accordion-header .accordion-button{background: #4169E1;color: #FFF;font-size: 24px}
+.faq .accordion-collapse {
+	background: #000;color: #FFF;
+}
+.nav-tabs .nav-link {
+    padding: 15px 30px;
+    background: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+.nav-tabs .nav-link.active {
+    background: #4169E1;
+    font-weight: bold;
+    color: #FFF;
+}
+.model-page table td,.model-page table th{background:#000 !important;color:#FFF;}
+.model-rate table td{
+    background: #4169E1;color:#FFF;
+}
+footer{border-top: 1px solid #FFF;}
+footer h3{ color:#FFF; }
+footer .icon-list{margin: 0;padding: 0}
+footer .icon-list li{list-style: none;line-height: 36px;}
+footer .icon-list li a{color: #FFF;text-decoration: none;}
+@media(max-width:520px){
+    .nav-tabs .nav-link {
+            padding: 12px;
+        font-size: 14px;
+}
+.article-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #FFF;
+}
+}
